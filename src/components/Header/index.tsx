@@ -1,14 +1,14 @@
-import { useRouter } from 'next/dist/client/router'
 import React from 'react'
-import { HeaderWrapper, HeaderLinks } from './style'
+import ActiveLink from './Link'
+import { HeaderWrapper } from './style'
 
 export const Header: React.FC = () => {
   return (
     <HeaderWrapper>
-      <HeaderLinks href="/">Inicio</HeaderLinks>
-      <HeaderLinks href="/about">Sobre</HeaderLinks>
-      <HeaderLinks href="#">Projetos</HeaderLinks>
-      <HeaderLinks href="#">Contato</HeaderLinks>
+      <ActiveLink href="/">Inicio</ActiveLink>
+      <ActiveLink href="/about">Sobre</ActiveLink>
+      <ActiveLink href="/projects">Projetos</ActiveLink>
+      <ActiveLink href="#">Contato</ActiveLink>
     </HeaderWrapper>
   )
 }
