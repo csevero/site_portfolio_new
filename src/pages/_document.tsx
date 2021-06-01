@@ -52,7 +52,35 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link ref="icon" rel="favicon.ico" />
-
+          <meta name="language" content="pt-BR" />
+          <meta
+            name="description"
+            content="Esse é o site da minha biografia onde falo um pouco mais sobre minha pessoa, exponho alguns de meus projetos. Fiz o site pensando em aprimorar meu conhecimento e também me apresentar a todos da World Wide Web!"
+          />
+          <meta name="robots" content="all" />
+          <meta name="author" content="Carlos Eduardo Severo" />
+            
+          <meta
+            name="keywords"
+            content="portfolio, programação, projetos, reactjs, nodejs, nextjs"
+          />
+          <meta property="og:type" content="page" />
+          <meta property="og:url" content="https://carlossevero.com.br" />
+          <meta property="og:title" content="Meu portfólio - Carlos Severo" />
+            
+          <meta
+            property="og:description"
+            content="Esse é o site da minha biografia onde falo um pouco mais sobre minha pessoa, exponho alguns de meus projetos. Fiz o site pensando em aprimorar meu conhecimento e também me apresentar a todos da World Wide Web!"
+          />
+          <meta property="article:author" content="Carlos Eduardo Severo" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@srdusev" />
+          <meta name="twitter:title" content="Meu portfólio - Carlos Severo" /> 
+          <meta name="twitter:creator" content="@srdusev" />
+          <meta
+            name="twitter:description"
+            content="Esse é o site da minha biografia onde falo um pouco mais sobre minha pessoa, exponho alguns de meus projetos. Fiz o site pensando em aprimorar meu conhecimento e também me apresentar a todos da World Wide Web!"
+          />
         </Head>
         <body>
           {/* dentro do main é onde será renderizado o conteúdo da nossa página */}
