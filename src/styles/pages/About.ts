@@ -4,12 +4,11 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   max-width: 90vw;
-
-  margin: 0 auto;
+  margin: 50px auto 0;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 
   h1 {
     margin-bottom: 20px;
@@ -18,10 +17,6 @@ export const Container = styled.div`
   @media (max-width: 800px) {
     justify-content: flex-start;
     padding: 0;
-
-    h1 {
-      margin: 40px 0 10px 0;
-    }
   }
 
   .about-infos {
