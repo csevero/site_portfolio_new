@@ -12,9 +12,11 @@ export const Container = styled.div`
   .projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 
-  @media(max-width: 800px) {
+  @media (max-width: 800px) {
     padding: 0;
   }
 `

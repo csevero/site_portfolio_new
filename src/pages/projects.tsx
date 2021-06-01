@@ -8,6 +8,7 @@ import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
 import TsIcon from '../assets/vector/typescript.svg'
 import SocketIcon from '../assets/vector/socket-io.svg'
+import { Button } from '../components/ProjectsCard/style'
 
 const Projects: React.FC = () => {
   return (
@@ -24,67 +25,104 @@ const Projects: React.FC = () => {
           Projetos
         </motion.h1>
         <div className="projects">
-          <Card
-            title="Site - Impactos Car"
-            subject="Site de uma funilaria, feito para
-aprimorar conhecimentos"
-            accessOnGithub="#"
-            accessSite="#"
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.5 }}
           >
-            <TsIcon />
-            <ReactIcon />
-          </Card>
-          <Card
-            title="Site - Spider Man"
-            subject="Site feito durante uma imersão, foi refeito utilizando tecnologias atuais"
-            accessOnGithub="#"
-            accessSite="#"
+            <Card
+              title="Site - Impactos Car"
+              subject="Site de uma funilaria, feito para
+            aprimorar conhecimentos"
+              accessOnGithub="#"
+              accessSite="#"
+            >
+              <TsIcon />
+              <ReactIcon />
+            </Card>
+          </motion.div>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.8 }}
           >
-            <TsIcon />
-            <ReactIcon />
-          </Card>
-          <Card
-            title="Sistema - Delivery DS"
-            subject="Projeto feito durante uma imersão, usado tecnologias para Front e Backend"
-            accessOnGithub="#"
-            accessSite="#"
+            <Card
+              title="Site - Spider Man"
+              subject="Site feito durante uma imersão, foi refeito utilizando tecnologias atuais"
+              accessOnGithub="#"
+              accessSite="#"
+            >
+              <TsIcon />
+              <ReactIcon />
+            </Card>
+          </motion.div>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 1.1 }}
           >
-            <TsIcon />
-            <ReactIcon />
-            <JavaIcon />
-          </Card>
-          <Card
-            title="Sistema - Prova Técnica"
-            subject="Projeto feito durante uma seleção feita
+            <Card
+              title="Sistema - Delivery DS"
+              subject="Projeto feito durante uma imersão, usado tecnologias para Front e Backend"
+              accessOnGithub="#"
+              accessSite="#"
+            >
+              <TsIcon />
+              <ReactIcon />
+              <JavaIcon />
+            </Card>
+          </motion.div>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 1.4 }}
+          >
+            <Card
+              title="Sistema - Prova Técnica"
+              subject="Projeto feito durante uma seleção feita
             para ingressar na empresa Slide Works"
-            accessOnGithub="#"
-            accessSite="#"
+              accessOnGithub="#"
+              accessSite="#"
+            >
+              <TsIcon />
+              <ReactIcon />
+              <NodeIcon />
+            </Card>
+          </motion.div>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 1.7 }}
           >
-            <TsIcon />
-            <ReactIcon />
-            <NodeIcon />
-          </Card>
-          <Card
-            title="Projeto - Chat RealTime"
-            subject="Projeto feito durante a imersão oferecida
+            <Card
+              title="Projeto - Chat RealTime"
+              subject="Projeto feito durante a imersão oferecida
             pela Rocketseat. NLW-5"
-            accessOnGithub="#"
-            // accessSite="#"
+              accessOnGithub="#"
+              // accessSite="#"
+            >
+              <TsIcon />
+              <NodeIcon />
+              <SocketIcon />
+            </Card>
+          </motion.div>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 2.0 }}
           >
-            <TsIcon />
-            <NodeIcon />
-            <SocketIcon />
-          </Card>
-          <Card
-            title="Projeto - Pesquisa NPS"
-            subject="Projeto feito durante a imersão oferecida
+            <Card
+              title="Projeto - Pesquisa NPS"
+              subject="Projeto feito durante a imersão oferecida
             pela Rocketseat. NLW-4"
-            accessOnGithub="#"
-            // accessSite="#"
-          >
-            <TsIcon />
-            <NodeIcon />
-          </Card>
+              accessOnGithub="#"
+              // accessSite="#"
+            >
+              <TsIcon />
+              <NodeIcon />
+            </Card>
+          </motion.div>
+          <Button style={{ marginTop: '10px' }}>Ver mais no Github</Button>
         </div>
       </Container>
     </>
