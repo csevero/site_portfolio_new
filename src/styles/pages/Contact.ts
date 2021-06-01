@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media(max-width: 800px) {
+  @media (max-width: 800px) {
     padding: 0;
   }
 `
@@ -49,6 +49,7 @@ export const FirstSection = styled.div`
     text-decoration: none;
     color: initial;
     font-size: 18px;
+    animation: pulse-text 2s ease-in-out infinite alternate;
   }
 
   .social-networks {
@@ -73,6 +74,15 @@ export const FirstSection = styled.div`
           margin-left: 0;
         }
       }
+    }
+  }
+
+  @keyframes pulse-text {
+    to {
+      color: ${props => props.theme.colors.black_2};
+    }
+    from {
+      color: ${props => props.theme.colors.blue_1};
     }
   }
 `

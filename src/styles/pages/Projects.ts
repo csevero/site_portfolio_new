@@ -9,6 +9,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+`
+
+export const Wrapper = styled.div`
   .projects {
     display: flex;
     flex-wrap: wrap;
@@ -21,9 +27,5 @@ export const Container = styled.div`
       font-weight: 500;
       background: ${props => props.theme.colors.green};
     }
-  }
-
-  @media (max-width: 800px) {
-    padding: 0;
   }
 `
