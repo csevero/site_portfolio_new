@@ -35,8 +35,8 @@ const Projects: React.FC = () => {
                 title="Site - Impactos Car"
                 subject="Site de uma funilaria, feito para
             aprimorar conhecimentos"
-                accessOnGithub="#"
-                accessSite="#"
+                accessOnGithub="https://github.com/kissinger156/site_bodyShop"
+                accessSite="https://impactos-car.netlify.app/"
               >
                 <TsIcon />
                 <ReactIcon />
@@ -50,8 +50,8 @@ const Projects: React.FC = () => {
               <Card
                 title="Site - Spider Man"
                 subject="Site feito durante uma imersão, foi refeito utilizando tecnologias atuais"
-                accessOnGithub="#"
-                accessSite="#"
+                accessOnGithub="https://github.com/kissinger156/site_project_spiderman-React"
+                accessSite="https://spiderman-milesmorales-react.netlify.app/"
               >
                 <TsIcon />
                 <ReactIcon />
@@ -65,8 +65,8 @@ const Projects: React.FC = () => {
               <Card
                 title="Sistema - Delivery DS"
                 subject="Projeto feito durante uma imersão, usado tecnologias para Front e Backend"
-                accessOnGithub="#"
-                accessSite="#"
+                accessOnGithub="https://github.com/kissinger156/project_devSuperior"
+                accessSite="https://deliveryds-sds2.netlify.app/"
               >
                 <TsIcon />
                 <ReactIcon />
@@ -82,8 +82,8 @@ const Projects: React.FC = () => {
                 title="Sistema - Prova Técnica"
                 subject="Projeto feito durante uma seleção feita
             para ingressar na empresa Slide Works"
-                accessOnGithub="#"
-                accessSite="#"
+                accessOnGithub="https://github.com/kissinger156/prova_tecnica_slide_works"
+                accessSite="https://prova-tecnica-slide-works.netlify.app/"
               >
                 <TsIcon />
                 <ReactIcon />
@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
                 title="Projeto - Chat RealTime"
                 subject="Projeto feito durante a imersão oferecida
             pela Rocketseat. NLW-5"
-                accessOnGithub="#"
+                accessOnGithub="https://github.com/kissinger156/nlw_5"
                 // accessSite="#"
               >
                 <TsIcon />
@@ -116,7 +116,7 @@ const Projects: React.FC = () => {
                 title="Projeto - Pesquisa NPS"
                 subject="Projeto feito durante a imersão oferecida
             pela Rocketseat. NLW-4"
-                accessOnGithub="#"
+                accessOnGithub="https://github.com/kissinger156/nlw4_node"
                 // accessSite="#"
               >
                 <TsIcon />
@@ -129,6 +129,9 @@ const Projects: React.FC = () => {
               transition={{ ease: 'easeInOut', duration: 0.5, delay: 2.3 }}
               width="150px"
               className="button-github"
+              href="https://github.com/kissinger156?tab=repositories"
+              rel="noreferrer noopener"
+              target="_blank"
             >
               Ver mais no Github
             </ButtonCustom>

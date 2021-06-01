@@ -60,22 +60,28 @@ const About: React.FC = () => {
               </span>
               <span className="link">
                 <b>Email: </b>
-                <a href="#">severo.e.carlos@gmail.com</a>
+                <a href="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo">
+                  severo.e.carlos@gmail.com
+                </a>
               </span>
               <span className="link">
                 <b>Whatsapp: </b>
-                <a href="#">(15)99660-5712</a>
+                <a href="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!">
+                  (15)99660-5712
+                </a>
               </span>
               <span className="link">
                 <b>Trabalho: </b>
                 Desenvolvedor na{' '}
-                <a href="#">
+                <a href="https://slideworks.cc/pt-BR/">
                   <b> Slide Works</b>
                 </a>
               </span>
               <span className="link">
                 <b>Youtube: </b>
-                <a href="#">Carlos Severo</a>
+                <a href="https://www.youtube.com/channel/UCFcuIk6AjU_eiLZaTjJA8kA">
+                  Carlos Severo
+                </a>
               </span>
             </motion.div>
           </div>

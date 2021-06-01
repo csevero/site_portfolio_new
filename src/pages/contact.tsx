@@ -18,21 +18,45 @@ const Contact: React.FC = () => {
           </h2>
 
           <span>EMAIL</span>
-          <a href="#">severo.e.carlos@gmail.com</a>
+          <a
+            rel="noreferrer noopener"
+            target="_blank"
+            href="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo"
+          >
+            severo.e.carlos@gmail.com
+          </a>
 
           <span>WHATSAPP</span>
-          <a href="#">(15)99660-5712</a>
+          <a
+            rel="noreferrer noopener"
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!"
+          >
+            (15)99660-5712
+          </a>
 
           <div className="social-networks">
             <span>REDES SOCIAIS</span>
             <div className="links">
-              <a href="#">
+              <a
+                rel="noreferrer noopener"
+                target="_blank"
+                href="https://github.com/kissinger156"
+              >
                 <GitIcon />
               </a>
-              <a href="#">
+              <a
+                rel="noreferrer noopener"
+                target="_blank"
+                href="https://www.linkedin.com/in/carlos-severo-634271162/"
+              >
                 <LinkedinIcon />
               </a>
-              <a href="#">
+              <a
+                rel="noreferrer noopener"
+                target="_blank"
+                href="https://www.instagram.com/carlosedu156/"
+              >
                 <InstaIcon />
               </a>
             </div>

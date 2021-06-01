@@ -24,11 +24,18 @@ export const Card: React.FC<ICardProps> = ({
       <div className="icons">{children}</div>
       <div className="buttons">
         {accessSite && (
-          <Button backgroundColor={theme.colors.blue_1} href={accessSite}>
+          <Button
+            rel="noreferrer noopener"
+            target="_blank"
+            backgroundColor={theme.colors.blue_1}
+            href={accessSite}
+          >
             Acessar
           </Button>
         )}
-        <Button href={accessOnGithub}>Ver no Github</Button>
+        <Button rel="noreferrer noopener" target="_blank" href={accessOnGithub}>
+          Ver no Github
+        </Button>
       </div>
     </CardContainer>
   )

@@ -10,10 +10,8 @@ export const Button: React.FC<IButtonProps> = ({
   children,
   backgroundColor,
   ...rest
-}) => {
-  return (
-    <ButtonCustom backgroundColor={backgroundColor} {...rest}>
-      {children}
-    </ButtonCustom>
-  )
-}
+}) => (
+  <ButtonCustom backgroundColor={backgroundColor} {...rest}>
+    {children}
+  </ButtonCustom>
+)

@@ -45,19 +45,39 @@ const Home: React.FC = () => {
           <h1 id="typing"></h1>
           <Button href="/about">Mais sobre mim</Button>
           <div className="social-networks">
-            <a href="#">
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo"
+            >
               <MailIcon />
             </a>
-            <a href="#">
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href="https://github.com/kissinger156"
+            >
               <GitIcon />
             </a>
-            <a href="#">
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href="https://www.linkedin.com/in/carlos-severo-634271162/"
+            >
               <LinkedinIcon />
             </a>
-            <a href="#">
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!"
+            >
               <WhatsIcon />
             </a>
-            <a href="#">
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href="https://www.instagram.com/carlosedu156/"
+            >
               <InstagramIcon />
             </a>
           </div>
