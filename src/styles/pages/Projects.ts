@@ -14,6 +14,13 @@ export const Container = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+
+    .button-github {
+      font-size: 18px;
+      padding: 10px 25px;
+      font-weight: 500;
+      background: ${props => props.theme.colors.green};
+    }
   }
 
   @media (max-width: 800px) {

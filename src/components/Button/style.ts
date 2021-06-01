@@ -1,12 +1,13 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 interface IButtonProps {
+  width?: string
   backgroundColor?: string
 }
 
-export const ButtonCustom = styled.a<IButtonProps>`
-  width: 160px;
-  /* display: block; */
+export const ButtonCustom = styled(motion.a)<IButtonProps>`
+  width: ${props => props.width || '160px'};
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
@@ -15,6 +16,7 @@ export const ButtonCustom = styled.a<IButtonProps>`
   color: ${props => props.theme.colors.white};
   background: ${props => props.backgroundColor || props.theme.colors.blue_2};
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);

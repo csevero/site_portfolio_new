@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import React from 'react'
-import { Card } from '../components/ProjectsCard/Card'
-import { Container } from '../styles/pages/Projects'
 import JavaIcon from '../assets/vector/java.svg'
 import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
-import TsIcon from '../assets/vector/typescript.svg'
 import SocketIcon from '../assets/vector/socket-io.svg'
-import { Button } from '../components/ProjectsCard/style'
+import TsIcon from '../assets/vector/typescript.svg'
+import { ButtonCustom } from '../components/Button/style'
+import { Card } from '../components/ProjectsCard/Card'
+import { Container } from '../styles/pages/Projects'
 
 const Projects: React.FC = () => {
   return (
@@ -122,7 +122,15 @@ const Projects: React.FC = () => {
               <NodeIcon />
             </Card>
           </motion.div>
-          <Button style={{ marginTop: '10px' }}>Ver mais no Github</Button>
+          <ButtonCustom
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.5, delay: 2.3 }}
+            width="150px"
+            className="button-github"
+          >
+            Ver mais no Github
+          </ButtonCustom>
         </div>
       </Container>
     </>
