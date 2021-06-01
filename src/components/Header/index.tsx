@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
       <ActiveLink href="/">Inicio</ActiveLink>
       <ActiveLink href="/about">Sobre</ActiveLink>
       <ActiveLink href="/projects">Projetos</ActiveLink>
-      <ActiveLink href="#">Contato</ActiveLink>
+      <ActiveLink href="/contact">Contato</ActiveLink>
     </HeaderWrapper>
   )
 }

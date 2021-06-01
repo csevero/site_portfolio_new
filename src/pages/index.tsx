@@ -8,6 +8,7 @@ import MailIcon from '../assets/vector/mail1.svg'
 import WhatsIcon from '../assets/vector/whatsapp.svg'
 import { Button } from '../components/Button'
 import { Container, FirstSection } from '../styles/pages/Home'
+import BoyCoding from '../assets/json/boy-coding.json'
 
 import Typewriter from 'typewriter-effect/dist/core'
 
@@ -62,7 +63,7 @@ const Home: React.FC = () => {
           </div>
         </FirstSection>
         <Player
-          src="https://assets8.lottiefiles.com/private_files/lf30_WdTEui.json"
+          src={BoyCoding}
           autoplay
           loop
           style={{ height: '450px', width: '450px' }}
