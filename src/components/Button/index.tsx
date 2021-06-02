@@ -2,7 +2,7 @@ import React, { AnchorHTMLAttributes } from 'react'
 
 import { ButtonCustom } from './style'
 
-interface IButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface IButtonProps {
   backgroundColor?: string
 }
 
