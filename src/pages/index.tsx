@@ -11,6 +11,7 @@ import { Container, FirstSection } from '../styles/pages/Home'
 import BoyCoding from '../assets/json/boy-coding.json'
 
 import Typewriter from 'typewriter-effect/dist/core'
+import { ButtonCustom } from '../components/Button/style'
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -43,7 +44,7 @@ const Home: React.FC = () => {
         <FirstSection>
           <h2>Prazer, eu sou o Carlos</h2>
           <h1 id="typing"></h1>
-          <Button href="/about">Mais sobre mim</Button>
+          <ButtonCustom href="/about">Mais sobre mim</ButtonCustom>
           <div className="social-networks">
             <a
               rel="noreferrer noopener"
