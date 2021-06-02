@@ -53,4 +53,9 @@ export const Button = styled.a<IButtonCardProps>`
   text-decoration: none;
   font-weight: 500;
   border-radius: 10px;
+  transition: all 0.2s;
+
+  &:hover {
+    filter: brightness(0.8)
+  }
 `

@@ -17,4 +17,4 @@ const StylesProvider: React.FC = ({ children }) => {
   )
 }
 
-export default StylesProvider
+export { StylesProvider, StylesContext }
