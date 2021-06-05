@@ -11,8 +11,8 @@ export const ButtonCustom = styled(motion.a)<IButtonProps>`
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
-  padding: 13px 0;
-  font-size: 20px;
+  padding: 10px 0;
+  font-size: 18px;
   color: ${props => props.theme.colors.white};
   background: ${props => props.backgroundColor || props.theme.colors.blue_2};
   transition: all 0.2s ease-in-out;

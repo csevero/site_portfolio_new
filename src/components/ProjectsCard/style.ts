@@ -1,10 +1,11 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 interface IButtonCardProps {
   backgroundColor?: string
 }
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(motion.div)`
   width: 350px;
   padding: 10px 20px;
   background: ${props => props.theme.colors.blue_3};
@@ -56,6 +57,6 @@ export const Button = styled.a<IButtonCardProps>`
   transition: all 0.2s;
 
   &:hover {
-    filter: brightness(0.8)
+    filter: brightness(0.8);
   }
 `

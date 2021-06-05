@@ -8,10 +8,9 @@ import InstagramIcon from '../assets/vector/instagram1.svg'
 import LinkedinIcon from '../assets/vector/linkedin.svg'
 import MailIcon from '../assets/vector/mail1.svg'
 import WhatsIcon from '../assets/vector/whatsapp.svg'
-import { ButtonCustom } from '../components/Button/style'
+import { Button } from '../components/Button'
 import { Container } from '../styles/global'
 import { FirstSection, Wrapper } from '../styles/pages/Home'
-
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -45,7 +44,7 @@ const Home: React.FC = () => {
           <FirstSection>
             <h2>Prazer, eu sou o Carlos</h2>
             <h1 id="typing"></h1>
-            <ButtonCustom href="/about">Mais sobre mim</ButtonCustom>
+            <Button link="/about">Mais sobre mim</Button>
             <div className="social-networks">
               <a
                 rel="noreferrer noopener"

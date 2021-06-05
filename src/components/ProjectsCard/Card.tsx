@@ -1,3 +1,4 @@
+import { MotionProps } from 'framer-motion'
 import React from 'react'
 import theme from '../../styles/theme'
 import { CardContainer, Button } from './style'
@@ -7,6 +8,7 @@ interface ICardProps {
   subject: string
   accessSite?: string
   accessOnGithub: string
+  delay?: number
 }
 
 export const Card: React.FC<ICardProps> = ({
@@ -14,11 +16,16 @@ export const Card: React.FC<ICardProps> = ({
   accessOnGithub,
   subject,
   title,
-  accessSite
+  accessSite,
+  delay
 }) => {
   //BUSCAR UMA FORME DE PASSAR UMA LISTA DINÂMICA DENTRO DO COMPONENTE
   return (
-    <CardContainer>
+    <CardContainer
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: 'easeInOut', duration: 0.5, delay: delay }}
+    >
       <h1>{title}</h1>
       <p>{subject}</p>
       <div className="icons">{children}</div>
