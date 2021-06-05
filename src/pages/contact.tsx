@@ -4,8 +4,9 @@ import SendEmail from '../assets/json/email-send.json'
 import GitIcon from '../assets/vector/github.svg'
 import InstaIcon from '../assets/vector/instagram1.svg'
 import LinkedinIcon from '../assets/vector/linkedin.svg'
-import { Container, FirstSection, Wrapper } from '../styles/pages/Contact'
+import { FirstSection, Wrapper } from '../styles/pages/Contact'
 import Head from 'next/head'
+import { Container } from '../styles/global'
 
 const Contact: React.FC = () => {
   return (

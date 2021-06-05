@@ -1,12 +1,7 @@
 import styled from 'styled-components'
 
-export const Container = styled.main`
-  width: 100vw;
-  max-width: 90vw;
-  height: 100vh;
-
-  margin: 0 auto;
-
+export const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -16,7 +11,9 @@ export const Container = styled.main`
   }
 
   @media (max-width: 800px) {
+    height: 80vh;
     flex-direction: column-reverse;
+    align-items: center;
 
     .main-gif {
       display: none;

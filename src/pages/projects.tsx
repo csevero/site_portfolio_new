@@ -8,7 +8,8 @@ import SocketIcon from '../assets/vector/socket-io.svg'
 import TsIcon from '../assets/vector/typescript.svg'
 import { ButtonCustom } from '../components/Button/style'
 import { Card } from '../components/ProjectsCard/Card'
-import { Container, Wrapper } from '../styles/pages/Projects'
+import { Wrapper } from '../styles/pages/Projects'
+import { Container } from '../styles/global'
 
 const Projects: React.FC = () => {
   return (

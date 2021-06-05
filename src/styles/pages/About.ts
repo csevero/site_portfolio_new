@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  width: 100vw;
-  max-width: 90vw;
-  margin: 50px auto 0;
-  padding: 0 30px;
-  display: flex;
-  flex-direction: column;
-
+export const Wrapper = styled.div`
   h1 {
     margin-bottom: 20px;
   }
