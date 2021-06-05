@@ -1,4 +1,5 @@
 import { Player } from '@lottiefiles/react-lottie-player'
+import { motion } from 'framer-motion'
 import Head from 'next/head'
 import React, { useEffect } from 'react'
 import Typewriter from 'typewriter-effect/dist/core'
@@ -42,10 +43,26 @@ const Home: React.FC = () => {
       <Container>
         <Wrapper>
           <FirstSection>
-            <h2>Prazer, eu sou o Carlos</h2>
-            <h1 id="typing"></h1>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: 'easeOut', duration: 0.5 }}
+            >
+              Prazer, eu sou o Carlos
+            </motion.h2>
+            <motion.h1
+              id="typing"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: 'easeOut', duration: 0.5, delay: 0.3 }}
+            ></motion.h1>
             <Button link="/about">Mais sobre mim</Button>
-            <div className="social-networks">
+            <motion.div
+              className="social-networks"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: 'easeOut', duration: 0.8 }}
+            >
               <a
                 rel="noreferrer noopener"
                 target="_blank"
@@ -81,7 +98,7 @@ const Home: React.FC = () => {
               >
                 <InstagramIcon />
               </a>
-            </div>
+            </motion.div>
           </FirstSection>
           <Player
             src={BoyCoding}
