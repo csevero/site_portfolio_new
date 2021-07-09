@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { AnchorStyleCSS } from '../commonStyles'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   h1 {
     margin-bottom: 20px;
   }
@@ -12,6 +14,7 @@ export const Wrapper = styled.div`
 
   .about-infos {
     display: flex;
+    align-items: center;
 
     img {
       width: 300px;
@@ -27,8 +30,9 @@ export const Wrapper = styled.div`
       }
 
       p {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 25px;
+        text-align: justify;
       }
 
       .link {
@@ -42,9 +46,7 @@ export const Wrapper = styled.div`
         }
 
         a {
-          text-decoration: none;
-          color: initial;
-          animation: pulse-text 2s ease-in-out infinite alternate;
+          ${AnchorStyleCSS}
         }
       }
     }
@@ -55,17 +57,7 @@ export const Wrapper = styled.div`
       flex-direction: column;
       .infos {
         margin: 10px 0;
-        text-align: justify;
       }
-    }
-  }
-
-  @keyframes pulse-text {
-    to {
-      color: ${props => props.theme.colors.black_2};
-    }
-    from {
-      color: ${props => props.theme.colors.blue_1};
     }
   }
 `

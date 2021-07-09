@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import { AnchorStyleCSS } from '../commonStyles'
 
 export const Wrapper = styled.div`
   display: flex;
+  height: calc(100vh - 10rem);
   justify-content: space-evenly;
   align-items: center;
 
@@ -33,10 +35,13 @@ export const FirstSection = styled.div`
   }
 
   a {
-    text-decoration: none;
-    color: initial;
-    font-size: 18px;
-    animation: pulse-text 2s ease-in-out infinite alternate;
+    ${AnchorStyleCSS}
+
+    &:hover {
+      &::after {
+        width: 0;
+      }
+    }
   }
 
   .social-networks {
@@ -61,15 +66,6 @@ export const FirstSection = styled.div`
           margin-left: 0;
         }
       }
-    }
-  }
-
-  @keyframes pulse-text {
-    to {
-      color: ${props => props.theme.colors.black_2};
-    }
-    from {
-      color: ${props => props.theme.colors.blue_1};
     }
   }
 `

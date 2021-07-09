@@ -1,17 +1,20 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
   .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 20px;
+  }
 
-    .button-github {
-      font-size: 18px;
-      padding: 10px 25px;
-      font-weight: 500;
-      background: ${props => props.theme.colors.green};
-    }
+  .button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
   }
 `

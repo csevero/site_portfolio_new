@@ -9,32 +9,31 @@ interface ICardProps {
   accessSite?: string
   accessOnGithub: string
   delay?: number
+  icons: string[]
 }
 
 export const Card: React.FC<ICardProps> = ({
-  children,
   accessOnGithub,
   subject,
   title,
   accessSite,
-  delay
+  icons
 }) => {
-  //BUSCAR UMA FORME DE PASSAR UMA LISTA DINÂMICA DENTRO DO COMPONENTE
   return (
-    <CardContainer
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: 'easeInOut', duration: 0.5, delay: delay }}
-    >
+    <CardContainer>
       <h1>{title}</h1>
       <p>{subject}</p>
-      <div className="icons">{children}</div>
+      <div className="icons">
+        {icons.map((Icon, i) => {
+          return <Icon key={i} />
+        })}
+      </div>
       <div className="buttons">
         {accessSite && (
           <Button
             rel="noreferrer noopener"
             target="_blank"
-            backgroundColor={theme.colors.blue_1}
+            colorGreen
             href={accessSite}
           >
             Acessar

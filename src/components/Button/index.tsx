@@ -1,7 +1,6 @@
 import React from 'react'
-import { ButtonCustom } from './style'
 import Link from 'next/link'
-
+import { ButtonCustom } from '../../styles/commonStyles'
 interface IButtonProps {
   backgroundColor?: string
   width?: string
@@ -16,14 +15,7 @@ export const Button: React.FC<IButtonProps> = ({
   ...rest
 }) => (
   <Link href={link} passHref prefetch>
-    <ButtonCustom
-      backgroundColor={backgroundColor}
-      width={width}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ ease: 'easeInOut', duration: 0.5 }}
-      {...rest}
-    >
+    <ButtonCustom backgroundColor={backgroundColor} width={width} {...rest}>
       {children}
     </ButtonCustom>
   </Link>

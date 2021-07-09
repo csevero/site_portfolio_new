@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   width: 100%;
+  height: calc(100vh - 10rem);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -12,8 +14,9 @@ export const Wrapper = styled.div`
   }
 
   .view-count {
-    position: absolute;
-    bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 6rem;
   }
 
   @media (max-width: 800px) {
@@ -23,6 +26,12 @@ export const Wrapper = styled.div`
 
     .main-gif {
       display: none;
+    }
+
+    .view-count {
+      position: fixed;
+      bottom: 0;
+      margin-bottom: 1rem;
     }
   }
 `

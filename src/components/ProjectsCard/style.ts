@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { ButtonStyleCSS } from '../../styles/commonStyles'
 
-interface IButtonCardProps {
-  backgroundColor?: string
+interface IChangeColorButton {
+  colorGreen?: boolean
 }
 
-export const CardContainer = styled(motion.div)`
+export const CardContainer = styled.div`
   width: 350px;
   padding: 10px 20px;
   background: ${props => props.theme.colors.blue_3};
@@ -47,16 +48,8 @@ export const CardContainer = styled(motion.div)`
   }
 `
 
-export const Button = styled.a<IButtonCardProps>`
-  background: ${props => props.backgroundColor || props.theme.colors.green};
-  padding: 10px 25px;
-  color: ${props => props.theme.colors.white};
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 10px;
-  transition: all 0.2s;
-
-  &:hover {
-    filter: brightness(0.8);
-  }
+export const Button = styled.a<IChangeColorButton>`
+  ${ButtonStyleCSS}
+  background: ${props => props.colorGreen && props.theme.colors.green};
+  font-size: 15px;
 `

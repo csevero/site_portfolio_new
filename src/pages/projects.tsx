@@ -6,9 +6,9 @@ import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
 import SocketIcon from '../assets/vector/socket-io.svg'
 import TsIcon from '../assets/vector/typescript.svg'
-import { ButtonCustom } from '../components/Button/style'
+import { ButtonCustom } from '../styles/commonStyles'
 import { Card } from '../components/ProjectsCard/Card'
-import { Container } from '../styles/global'
+import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/Projects'
 import theme from '../styles/theme'
 
@@ -19,14 +19,12 @@ const Projects: React.FC = () => {
         <title>Projetos</title>
       </Head>
       <Container>
-        <Wrapper>
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: 'easeOut', duration: 0.5 }}
-          >
-            Projetos
-          </motion.h1>
+        <Wrapper
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
+          <h1>Projetos</h1>
           <div className="projects">
             <Card
               title="Site - Impactos Car"
@@ -34,34 +32,24 @@ const Projects: React.FC = () => {
             aprimorar conhecimentos"
               accessOnGithub="https://github.com/kissinger156/site_bodyShop"
               accessSite="https://impactos-car.netlify.app/"
-              delay={0.5}
-            >
-              <TsIcon />
-              <ReactIcon />
-            </Card>
+              icons={[TsIcon, ReactIcon]}
+            />
 
             <Card
               title="Site - Spider Man"
               subject="Site feito durante uma imersão, foi refeito utilizando tecnologias atuais"
               accessOnGithub="https://github.com/kissinger156/site_project_spiderman-React"
               accessSite="https://spiderman-milesmorales-react.netlify.app/"
-              delay={0.8}
-            >
-              <TsIcon />
-              <ReactIcon />
-            </Card>
+              icons={[TsIcon, ReactIcon]}
+            />
 
             <Card
               title="Sistema - Delivery DS"
               subject="Projeto feito durante uma imersão, usado tecnologias para Front e Backend"
               accessOnGithub="https://github.com/kissinger156/project_devSuperior"
               accessSite="https://deliveryds-sds2.netlify.app/"
-              delay={1.1}
-            >
-              <TsIcon />
-              <ReactIcon />
-              <JavaIcon />
-            </Card>
+              icons={[TsIcon, ReactIcon, JavaIcon]}
+            />
 
             <Card
               title="Sistema - Prova Técnica"
@@ -69,38 +57,28 @@ const Projects: React.FC = () => {
             para ingressar na empresa Slide Works"
               accessOnGithub="https://github.com/kissinger156/prova_tecnica_slide_works"
               accessSite="https://prova-tecnica-slide-works.netlify.app/"
-              delay={1.4}
-            >
-              <TsIcon />
-              <ReactIcon />
-              <NodeIcon />
-            </Card>
+              icons={[TsIcon, ReactIcon, NodeIcon]}
+            />
 
             <Card
               title="Projeto - Chat RealTime"
               subject="Projeto feito durante a imersão oferecida
             pela Rocketseat. NLW-5"
               accessOnGithub="https://github.com/kissinger156/nlw_5"
-              delay={1.7}
-            >
-              <TsIcon />
-              <NodeIcon />
-              <SocketIcon />
-            </Card>
+              icons={[TsIcon, ReactIcon, SocketIcon]}
+            />
 
             <Card
               title="Projeto - Pesquisa NPS"
               subject="Projeto feito durante a imersão oferecida
             pela Rocketseat. NLW-4"
               accessOnGithub="https://github.com/kissinger156/nlw4_node"
-              delay={2}
-            >
-              <TsIcon />
-              <NodeIcon />
-            </Card>
-
+              icons={[TsIcon, NodeIcon]}
+            />
+          </div>
+          <div className="button">
             <ButtonCustom
-              width="200px"
+              width="220px"
               href="https://github.com/kissinger156?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
