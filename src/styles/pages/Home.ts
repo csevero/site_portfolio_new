@@ -5,9 +5,15 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 
   .main-gif {
     display: initial;
+  }
+
+  .view-count {
+    position: absolute;
+    bottom: 10px;
   }
 
   @media (max-width: 800px) {

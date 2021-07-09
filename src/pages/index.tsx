@@ -1,7 +1,7 @@
 import { Player } from '@lottiefiles/react-lottie-player'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect/dist/core'
 import BoyCoding from '../assets/json/boy-coding.json'
 import GitIcon from '../assets/vector/github.svg'
@@ -12,8 +12,22 @@ import WhatsIcon from '../assets/vector/whatsapp.svg'
 import { Button } from '../components/Button'
 import { Container } from '../styles/global'
 import { FirstSection, Wrapper } from '../styles/pages/Home'
+import { database, firebase } from '../services/firebase'
 
 const Home: React.FC = () => {
+  const [views, setViews] = useState()
+  useEffect(() => {
+    async function getViews() {
+      const oldViews = await database.ref('views').get()
+      const newViews = oldViews.val().number + 1
+
+      await database.ref('views').update({ number: newViews })
+      setViews(newViews)
+    }
+
+    getViews()
+  }, [])
+
   useEffect(() => {
     const typing = document.getElementById('typing')
 
@@ -61,7 +75,7 @@ const Home: React.FC = () => {
               className="social-networks"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ ease: 'easeOut', duration: 0.8 }}
+              transition={{ ease: 'easeOut', duration: 0.8, delay: 0.8 }}
             >
               <a
                 rel="noreferrer noopener"
@@ -107,6 +121,12 @@ const Home: React.FC = () => {
             style={{ height: '450px', width: '450px' }}
             className="main-gif"
           />
+          <div className="view-count">
+            <span>
+              {new Date().toLocaleDateString('pt-BR', { dateStyle: 'long' })} -
+              Total de visitas {views}
+            </span>
+          </div>
         </Wrapper>
       </Container>
     </>
