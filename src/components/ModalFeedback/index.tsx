@@ -1,6 +1,6 @@
 import React, { FormEvent, useContext, useState } from 'react'
 import { ModalMask, ModalContent, Form } from './style'
-import { ButtonCustom } from '../../styles/commonStyles'
+// import { ButtonCustom } from '../../styles/commonStyles'
 import { ThemeContext } from 'styled-components'
 import { database } from '../../services/firebase'
 import { toast } from 'react-toastify'
