@@ -25,7 +25,7 @@ export const ButtonStyleCSS = css<IButtonProps>`
   width: ${props => (props.width ? props.width : '')};
   text-decoration: none;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: 500;
   padding: 10px 25px;
   border: none;
   font-size: 18px;

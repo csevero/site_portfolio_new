@@ -12,4 +12,8 @@ body {
   color: ${props => props.theme.colors.black_2};
   font: 400 16px Rubik, sans-serif;
 }
+
+textarea, input, button {
+  font-family: Rubik, sans-serif;
+}
 `

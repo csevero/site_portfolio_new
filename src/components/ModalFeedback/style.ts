@@ -84,7 +84,8 @@ export const Form = styled.form`
       font-weight: 500;
     }
 
-    input {
+    input,
+    textarea {
       font-size: 16px;
       padding: 10px 15px;
       border-radius: 10px;
@@ -97,6 +98,12 @@ export const Form = styled.form`
         outline: none;
         border: 1px solid ${props => `${props.theme.colors.blue_1}60`};
       }
+    }
+
+    textarea {
+      min-height: 80px;
+      max-height: 120px;
+      resize: vertical;
     }
   }
 

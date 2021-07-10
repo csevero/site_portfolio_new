@@ -52,7 +52,7 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
           </div>
           <div className="input-block">
             <label>Mensagem</label>
-            <input
+            <textarea
               value={message}
               onChange={e => setMessage(e.target.value)}
               required

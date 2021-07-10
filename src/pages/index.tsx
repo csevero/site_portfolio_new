@@ -16,22 +16,13 @@ import { database } from '../services/firebase'
 import { Container } from '../styles/commonStyles'
 import { FirstSection, Wrapper } from '../styles/pages/Home'
 
-const Home: React.FC = () => {
-  const [views, setViews] = useState()
+interface IHomeProps {
+  views: number
+}
+
+const Home: React.FC<IHomeProps> = ({ views }) => {
   const [openModal, setOpenModal] = useState(false)
   const theme = useContext(ThemeContext)
-
-  useEffect(() => {
-    async function getViews() {
-      const oldViews = await database.ref('views').get()
-      const newViews = oldViews.val().number + 1
-
-      await database.ref('views').update({ number: newViews })
-      setViews(newViews)
-    }
-
-    getViews()
-  }, [])
 
   useEffect(() => {
     const typing = document.getElementById('typing')
@@ -105,7 +96,7 @@ const Home: React.FC = () => {
           <div className="view-count">
             <span>
               {new Date().toLocaleDateString('pt-BR', { dateStyle: 'long' })} -
-              Total de visitas {views}
+              Total de visitas {views ? views : '...'}
             </span>
           </div>
         </Wrapper>
