@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 import JavaIcon from '../assets/vector/java.svg'
 import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
 import SocketIcon from '../assets/vector/socket-io.svg'
 import TsIcon from '../assets/vector/typescript.svg'
 import { AnchorButton } from '../components/AnchorButton'
-import { ButtonCustom } from '../components/Button/style'
 import { Card } from '../components/ProjectsCard/Card'
 import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/Projects'
-import theme from '../styles/theme'
 
 const Projects: React.FC = () => {
+  const theme = useContext(ThemeContext)
   return (
     <>
       <Head>
@@ -77,7 +77,10 @@ const Projects: React.FC = () => {
             />
           </div>
           <div className="button">
-            <AnchorButton link="https://github.com/kissinger156?tab=repositories">
+            <AnchorButton
+              style={{ background: theme.colors.green }}
+              link="https://github.com/kissinger156?tab=repositories"
+            >
               Ver mais no Github
             </AnchorButton>
           </div>

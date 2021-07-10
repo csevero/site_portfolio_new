@@ -1,6 +1,8 @@
 import { Player } from '@lottiefiles/react-lottie-player'
 import Head from 'next/head'
+import Link from 'next/link'
 import React, { useContext, useEffect, useState } from 'react'
+import { ThemeContext } from 'styled-components'
 import Typewriter from 'typewriter-effect/dist/core'
 import BoyCoding from '../assets/json/boy-coding.json'
 import GitIcon from '../assets/vector/github.svg'
@@ -8,14 +10,11 @@ import InstagramIcon from '../assets/vector/instagram1.svg'
 import LinkedinIcon from '../assets/vector/linkedin.svg'
 import MailIcon from '../assets/vector/mail1.svg'
 import WhatsIcon from '../assets/vector/whatsapp.svg'
-import { ButtonLink } from '../components/Button'
+import { AnchorButton } from '../components/AnchorButton'
+import { ModalFeedback } from '../components/ModalFeedback'
 import { database } from '../services/firebase'
 import { Container } from '../styles/commonStyles'
 import { FirstSection, Wrapper } from '../styles/pages/Home'
-import { AnchorButton } from '../components/AnchorButton'
-import { ButtonCustom } from '../components/Button/style'
-import { ThemeContext } from 'styled-components'
-import { ModalFeedback } from '../components/ModalFeedback'
 
 const Home: React.FC = () => {
   const [views, setViews] = useState()
@@ -69,17 +68,15 @@ const Home: React.FC = () => {
           <FirstSection>
             <h2>Prazer, eu sou o Carlos</h2>
             <h1 id="typing" />
-            <ButtonLink width="190px" link="/about">
-              Mais sobre mim
-            </ButtonLink>
-            <ButtonCustom
-              width="190px"
-              backgroundColor={theme.colors.green}
-              style={{ marginTop: '10px' }}
-              onClick={() => setOpenModal(true)}
-            >
-              Dar feedback
-            </ButtonCustom>
+            <div className="actions-button">
+              <Link href="/about">Mais sobre mim</Link>
+              <button
+                style={{ marginTop: '10px', background: theme.colors.green }}
+                onClick={() => setOpenModal(true)}
+              >
+                Dar feedback
+              </button>
+            </div>
             <div className="social-networks">
               <AnchorButton link="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo">
                 <MailIcon />

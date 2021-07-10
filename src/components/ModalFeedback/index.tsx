@@ -23,6 +23,7 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
         toast.error('Ops, algo deu errado :(')
       }
       toast.success('Obrigado pela ajuda!')
+      setIsOpen(false)
     })
   }
 
@@ -60,9 +61,8 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
           </div>
           <button type="submit">Enviar</button>
           <button
-            // backgroundColor={theme.colors.red}
             onClick={() => setIsOpen(false)}
-            style={{ marginTop: '10px' }}
+            style={{ marginTop: '10px', background: theme.colors.red }}
           >
             Cancelar
           </button>

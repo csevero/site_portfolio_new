@@ -16,12 +16,13 @@ export const ModalMask = styled(motion.div)`
 `
 
 export const ModalContent = styled.div`
-  width: 50vw;
+  width: 30vw;
   background: ${props => props.theme.colors.white};
   position: relative;
   padding: 20px 35px;
   border-radius: 10px;
   z-index: 20;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 
   .close {
     width: 20px;
@@ -38,20 +39,18 @@ export const ModalContent = styled.div`
       content: '';
       width: 100%;
       height: 2px;
+      top: 50%;
+      left: 0;
       position: absolute;
 
       background: #000;
     }
 
     &::after {
-      top: 50%;
-      left: 0;
       transform: rotate(135deg);
     }
 
     &::before {
-      top: 50%;
-      left: 0;
       transform: rotate(-135deg);
     }
   }
@@ -91,6 +90,13 @@ export const Form = styled.form`
       border-radius: 10px;
       margin-top: 5px;
       border: 1px solid rgba(0, 0, 0, 0.3);
+      transition: all 0.2s;
+
+      &:active,
+      &:focus {
+        outline: none;
+        border: 1px solid ${props => `${props.theme.colors.blue_1}60`};
+      }
     }
   }
 

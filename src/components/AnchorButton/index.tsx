@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { AnchorHTMLAttributes } from 'react'
 
-interface IAnchorButton {
+interface IAnchorButton extends AnchorHTMLAttributes<HTMLAnchorElement> {
   link: string
 }
 export const AnchorButton: React.FC<IAnchorButton> = ({

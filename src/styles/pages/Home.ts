@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { ButtonStyleCSS } from '../commonStyles'
 
 export const Wrapper = styled(motion.div)`
   width: 100%;
@@ -51,6 +52,17 @@ export const FirstSection = styled.div`
     font-weight: 700;
     font-size: 40px;
     margin-bottom: 20px;
+  }
+
+  .actions-button {
+    display: flex;
+    flex-direction: column;
+
+    a,
+    button {
+      width: 190px;
+      ${ButtonStyleCSS}
+    }
   }
 
   .social-networks {
