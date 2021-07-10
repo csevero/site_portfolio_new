@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { ButtonStyleCSS } from '../commonStyles'
 
 export const Wrapper = styled(motion.div)`
   width: 100%;
@@ -16,5 +17,9 @@ export const Wrapper = styled(motion.div)`
     display: flex;
     justify-content: center;
     margin: 20px 0;
+
+    a {
+      ${ButtonStyleCSS}
+    }
   }
 `

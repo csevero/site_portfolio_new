@@ -1,6 +1,6 @@
 import { Player } from '@lottiefiles/react-lottie-player'
 import Head from 'next/head'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect/dist/core'
 import BoyCoding from '../assets/json/boy-coding.json'
 import GitIcon from '../assets/vector/github.svg'
@@ -8,13 +8,20 @@ import InstagramIcon from '../assets/vector/instagram1.svg'
 import LinkedinIcon from '../assets/vector/linkedin.svg'
 import MailIcon from '../assets/vector/mail1.svg'
 import WhatsIcon from '../assets/vector/whatsapp.svg'
-import { Button } from '../components/Button'
+import { ButtonLink } from '../components/Button'
 import { database } from '../services/firebase'
 import { Container } from '../styles/commonStyles'
 import { FirstSection, Wrapper } from '../styles/pages/Home'
 import { AnchorButton } from '../components/AnchorButton'
+import { ButtonCustom } from '../components/Button/style'
+import { ThemeContext } from 'styled-components'
+import { ModalFeedback } from '../components/ModalFeedback'
+
 const Home: React.FC = () => {
   const [views, setViews] = useState()
+  const [openModal, setOpenModal] = useState(false)
+  const theme = useContext(ThemeContext)
+
   useEffect(() => {
     async function getViews() {
       const oldViews = await database.ref('views').get()
@@ -62,9 +69,17 @@ const Home: React.FC = () => {
           <FirstSection>
             <h2>Prazer, eu sou o Carlos</h2>
             <h1 id="typing" />
-            <Button width="190px" link="/about">
+            <ButtonLink width="190px" link="/about">
               Mais sobre mim
-            </Button>
+            </ButtonLink>
+            <ButtonCustom
+              width="190px"
+              backgroundColor={theme.colors.green}
+              style={{ marginTop: '10px' }}
+              onClick={() => setOpenModal(true)}
+            >
+              Dar feedback
+            </ButtonCustom>
             <div className="social-networks">
               <AnchorButton link="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo">
                 <MailIcon />
@@ -97,6 +112,7 @@ const Home: React.FC = () => {
             </span>
           </div>
         </Wrapper>
+        {openModal && <ModalFeedback setIsOpen={setOpenModal} />}
       </Container>
     </>
   )

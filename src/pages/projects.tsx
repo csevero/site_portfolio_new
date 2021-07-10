@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import Head from 'next/head'
 import React from 'react'
 import JavaIcon from '../assets/vector/java.svg'
@@ -6,7 +5,8 @@ import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
 import SocketIcon from '../assets/vector/socket-io.svg'
 import TsIcon from '../assets/vector/typescript.svg'
-import { ButtonCustom } from '../styles/commonStyles'
+import { AnchorButton } from '../components/AnchorButton'
+import { ButtonCustom } from '../components/Button/style'
 import { Card } from '../components/ProjectsCard/Card'
 import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/Projects'
@@ -77,15 +77,9 @@ const Projects: React.FC = () => {
             />
           </div>
           <div className="button">
-            <ButtonCustom
-              width="220px"
-              href="https://github.com/kissinger156?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              backgroundColor={theme.colors.green}
-            >
+            <AnchorButton link="https://github.com/kissinger156?tab=repositories">
               Ver mais no Github
-            </ButtonCustom>
+            </AnchorButton>
           </div>
         </Wrapper>
       </Container>

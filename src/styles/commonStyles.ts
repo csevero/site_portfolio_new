@@ -27,6 +27,7 @@ export const ButtonStyleCSS = css<IButtonProps>`
   border-radius: 10px;
   font-weight: 500;
   padding: 10px 25px;
+  border: none;
   font-size: 18px;
   color: ${props => props.theme.colors.white};
   background: ${props => props.backgroundColor || props.theme.colors.blue_2};
@@ -71,8 +72,4 @@ export const AnchorStyleCSS = css`
       color: ${props => props.theme.colors.blue_1};
     }
   }
-`
-
-export const ButtonCustom = styled(motion.a)`
-  ${ButtonStyleCSS}
 `

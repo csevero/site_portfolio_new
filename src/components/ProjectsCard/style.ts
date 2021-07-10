@@ -51,5 +51,5 @@ export const CardContainer = styled.div`
 export const Button = styled.a<IChangeColorButton>`
   ${ButtonStyleCSS}
   background: ${props => props.colorGreen && props.theme.colors.green};
-  font-size: 15px;
+  font-size: 16px;
 `

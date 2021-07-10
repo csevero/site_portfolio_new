@@ -42,7 +42,7 @@ export const FirstSection = styled.div`
 
   h2 {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 32px;
     margin-bottom: 10px;
   }
 

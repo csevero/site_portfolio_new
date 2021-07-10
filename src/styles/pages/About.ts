@@ -26,7 +26,7 @@ export const Wrapper = styled(motion.div)`
 
       span {
         font-weight: 700;
-        font-size: 30px;
+        font-size: 32px;
       }
 
       p {

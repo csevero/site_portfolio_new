@@ -30,12 +30,13 @@ export const FirstSection = styled.div`
 
   span {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
   }
 
   a {
     ${AnchorStyleCSS}
+    font-size: 18px;
 
     &:hover {
       &::after {

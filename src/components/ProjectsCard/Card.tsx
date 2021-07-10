@@ -1,7 +1,5 @@
-import { MotionProps } from 'framer-motion'
 import React from 'react'
-import theme from '../../styles/theme'
-import { CardContainer, Button } from './style'
+import { Button, CardContainer } from './style'
 
 interface ICardProps {
   title: string

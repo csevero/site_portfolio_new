@@ -5,14 +5,17 @@ import { Header } from '../components/Header'
 import { StylesProvider } from '../contexts/StylesContext'
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <StylesProvider>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
         <Header />
         <Component {...pageProps} />
+        <GlobalStyle />
+        <ToastContainer />
       </ThemeProvider>
     </StylesProvider>
   )

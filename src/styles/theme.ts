@@ -6,7 +6,8 @@ const theme = {
     blue_3: '#AFC6FA', //blue_3
     blue_2: '#4B81FA', //blue_2
     blue_1: '#2567FA', //blue_1
-    green: '#06D261' //green
+    green: '#06D261', //green
+    red: '#d21605'
   }
 
   // dark: {

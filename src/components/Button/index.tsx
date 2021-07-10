@@ -1,13 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-import { ButtonCustom } from '../../styles/commonStyles'
+import { ButtonCustom } from './style'
 interface IButtonProps {
   backgroundColor?: string
   width?: string
   link: string
 }
 
-export const Button: React.FC<IButtonProps> = ({
+export const ButtonLink: React.FC<IButtonProps> = ({
   children,
   backgroundColor,
   width,

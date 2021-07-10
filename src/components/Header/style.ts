@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.header`
 
   a {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     color: ${props => props.theme.colors.black_1};
     position: relative;
     text-decoration: none;
