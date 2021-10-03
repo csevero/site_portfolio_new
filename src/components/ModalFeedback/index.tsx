@@ -1,9 +1,10 @@
 import React, { FormEvent, useContext, useState } from 'react'
-import { ModalMask, ModalContent, Form } from './style'
-// import { ButtonCustom } from '../../styles/commonStyles'
-import { ThemeContext } from 'styled-components'
-import { database } from '../../services/firebase'
 import { toast } from 'react-toastify'
+import { ThemeContext } from 'styled-components'
+import { getLanguage } from '../../helpers/getLanguage'
+import locales from '../../locales'
+import { database } from '../../services/firebase'
+import { Form, ModalContent, ModalMask } from './style'
 
 interface IModal {
   setIsOpen: (value: boolean) => void
@@ -13,6 +14,7 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
   const theme = useContext(ThemeContext)
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
+  const translate = getLanguage()
 
   async function handleSendFeedback(e: FormEvent) {
     e.preventDefault()
@@ -20,9 +22,9 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
     await database.ref(`/feedbacks/${name}`).set({ message }, error => {
       if (error) {
         console.log(error)
-        toast.error('Ops, algo deu errado :(')
+        toast.error(translate.notifications.feedbackError)
       }
-      toast.success('Obrigado pela ajuda!')
+      toast.success(translate.notifications.feedbackSuccess)
       setIsOpen(false)
     })
   }
@@ -35,36 +37,35 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
     >
       <ModalContent>
         <button onClick={() => setIsOpen(false)} className="close" />
-        <h1>Me fale o que achou do meu site!</h1>
-        <span>
-          Me fale em poucas palavras o que você mais gostou ou o que posso
-          melhorar no meu site!{' '}
-        </span>
+        <h1>{translate.modalFeedback.title}</h1>
+        <span>{translate.modalFeedback.description}</span>
         <Form onSubmit={handleSendFeedback}>
           <div className="input-block">
-            <label>Nome</label>
+            <label>{translate.modalFeedback.fields.name}</label>
             <input
               value={name}
               onChange={e => setName(e.target.value)}
               required
-              placeholder="Nome"
+              placeholder={translate.modalFeedback.fields.placeholderName}
             />
           </div>
           <div className="input-block">
-            <label>Mensagem</label>
+            <label>{translate.modalFeedback.fields.message}</label>
             <textarea
               value={message}
               onChange={e => setMessage(e.target.value)}
               required
-              placeholder="Mensagem"
+              placeholder={translate.modalFeedback.fields.placeholderMessage}
             />
           </div>
-          <button type="submit">Enviar</button>
+          <button type="submit">
+            {translate.modalFeedback.fields.buttonSend}
+          </button>
           <button
             onClick={() => setIsOpen(false)}
             style={{ marginTop: '10px', background: theme.colors.red }}
           >
-            Cancelar
+            {translate.modalFeedback.fields.buttonCancel}
           </button>
         </Form>
       </ModalContent>

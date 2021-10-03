@@ -8,24 +8,25 @@ import { FirstSection, Wrapper } from '../styles/pages/Contact'
 import Head from 'next/head'
 import { Container } from '../styles/commonStyles'
 import { AnchorButton } from '../components/AnchorButton'
+import { getLanguage } from '../helpers/getLanguage'
 
 const Contact: React.FC = () => {
+  const translate = getLanguage()
   return (
     <>
       <Head>
-        <title>Contato</title>
+        <title>{translate.contactsPage.title}</title>
       </Head>
       <Container>
         <Wrapper>
           <FirstSection>
-            <h1>Contato</h1>
-            <h2>
-              Para entrar em contato comigo, basta selecionar uma das opções
-              abaixo
-            </h2>
+            <h1>{translate.contactsPage.title}</h1>
+            <h2>{translate.contactsPage.subTitle}</h2>
 
             <span>EMAIL</span>
-            <AnchorButton link="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo">
+            <AnchorButton
+              link={`mailto:severo.e.carlos@gmail.com?subject=${translate.aboutPage.contentInfo.emailSubject}&body=${translate.aboutPage.contentInfo.emailBody}`}
+            >
               severo.e.carlos@gmail.com
             </AnchorButton>
 
@@ -35,7 +36,7 @@ const Contact: React.FC = () => {
             </AnchorButton>
 
             <div className="social-networks">
-              <span>REDES SOCIAIS</span>
+              <span>{translate.contactsPage.socialNetworks}</span>
               <div className="links">
                 <AnchorButton link="https://github.com/kissinger156">
                   <GitIcon />

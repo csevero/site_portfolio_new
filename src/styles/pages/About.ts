@@ -15,6 +15,7 @@ export const Wrapper = styled(motion.div)`
   .about-infos {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     img {
       width: 300px;

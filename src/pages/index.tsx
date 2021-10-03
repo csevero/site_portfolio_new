@@ -12,7 +12,7 @@ import MailIcon from '../assets/vector/mail1.svg'
 import WhatsIcon from '../assets/vector/whatsapp.svg'
 import { AnchorButton } from '../components/AnchorButton'
 import { ModalFeedback } from '../components/ModalFeedback'
-import { database } from '../services/firebase'
+import { getLanguage } from '../helpers/getLanguage'
 import { Container } from '../styles/commonStyles'
 import { FirstSection, Wrapper } from '../styles/pages/Home'
 
@@ -23,6 +23,7 @@ interface IHomeProps {
 const Home: React.FC<IHomeProps> = ({ views }) => {
   const [openModal, setOpenModal] = useState(false)
   const theme = useContext(ThemeContext)
+  const translate = getLanguage()
 
   useEffect(() => {
     const typing = document.getElementById('typing')
@@ -47,7 +48,7 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
   return (
     <>
       <Head>
-        <title>Olá!</title>
+        <title>{translate.homePage.title}</title>
       </Head>
 
       <Container>
@@ -57,15 +58,17 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
           transition={{ ease: 'easeOut', duration: 0.5 }}
         >
           <FirstSection>
-            <h2>Prazer, eu sou o Carlos</h2>
+            <h2>{translate.homePage.subTitle}</h2>
             <h1 id="typing" />
             <div className="actions-button">
-              <Link href="/about">Mais sobre mim</Link>
+              <Link href="/about">
+                {translate.homePage.buttons.moreAboutMe}
+              </Link>
               <button
                 style={{ marginTop: '10px', background: theme.colors.green }}
                 onClick={() => setOpenModal(true)}
               >
-                Dar feedback
+                {translate.homePage.buttons.feedback}
               </button>
             </div>
             <div className="social-networks">
@@ -95,8 +98,10 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
           />
           <div className="view-count">
             <span>
-              {new Date().toLocaleDateString('pt-BR', { dateStyle: 'long' })} -
-              Total de visitas {views ? views : '...'}
+              {new Date().toLocaleDateString(translate.locale, {
+                dateStyle: 'long'
+              })}{' '}
+              - {translate.homePage.totalVisits} {views ? views : '...'}
             </span>
           </div>
         </Wrapper>

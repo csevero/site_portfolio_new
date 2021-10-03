@@ -1,4 +1,5 @@
 import React from 'react'
+import { getLanguage } from '../../helpers/getLanguage'
 import { Button, CardContainer } from './style'
 
 interface ICardProps {
@@ -17,6 +18,7 @@ export const Card: React.FC<ICardProps> = ({
   accessSite,
   icons
 }) => {
+  const translate = getLanguage()
   return (
     <CardContainer>
       <h1>{title}</h1>
@@ -34,11 +36,11 @@ export const Card: React.FC<ICardProps> = ({
             colorGreen
             href={accessSite}
           >
-            Acessar
+            {translate.projectsPage.access}
           </Button>
         )}
         <Button rel="noreferrer noopener" target="_blank" href={accessOnGithub}>
-          Ver no Github
+          {translate.projectsPage.seeOnGithub}
         </Button>
       </div>
     </CardContainer>

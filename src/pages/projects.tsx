@@ -8,15 +8,17 @@ import SocketIcon from '../assets/vector/socket-io.svg'
 import TsIcon from '../assets/vector/typescript.svg'
 import { AnchorButton } from '../components/AnchorButton'
 import { Card } from '../components/ProjectsCard/Card'
+import { getLanguage } from '../helpers/getLanguage'
 import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/Projects'
 
 const Projects: React.FC = () => {
   const theme = useContext(ThemeContext)
+  const translate = getLanguage()
   return (
     <>
       <Head>
-        <title>Projetos</title>
+        <title>{translate.projectsPage.title}</title>
       </Head>
       <Container>
         <Wrapper
@@ -24,54 +26,50 @@ const Projects: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ ease: 'easeOut', duration: 0.5 }}
         >
-          <h1>Projetos</h1>
+          <h1>{translate.projectsPage.title}</h1>
           <div className="projects">
             <Card
-              title="Site - Impactos Car"
-              subject="Site de uma funilaria, feito para
-            aprimorar conhecimentos"
+              title={translate.projectsPage.firstProject.title}
+              subject={translate.projectsPage.firstProject.subject}
               accessOnGithub="https://github.com/kissinger156/site_bodyShop"
               accessSite="https://impactos-car.netlify.app/"
               icons={[TsIcon, ReactIcon]}
             />
 
             <Card
-              title="Site - Spider Man"
-              subject="Site feito durante uma imersão, foi refeito utilizando tecnologias atuais"
+              title={translate.projectsPage.secondProject.title}
+              subject={translate.projectsPage.secondProject.subject}
               accessOnGithub="https://github.com/kissinger156/site_project_spiderman-React"
               accessSite="https://spiderman-milesmorales-react.netlify.app/"
               icons={[TsIcon, ReactIcon]}
             />
 
             <Card
-              title="Sistema - Delivery DS"
-              subject="Projeto feito durante uma imersão, usado tecnologias para Front e Backend"
+              title={translate.projectsPage.thirdProject.title}
+              subject={translate.projectsPage.thirdProject.subject}
               accessOnGithub="https://github.com/kissinger156/project_devSuperior"
               accessSite="https://deliveryds-sds2.netlify.app/"
               icons={[TsIcon, ReactIcon, JavaIcon]}
             />
 
             <Card
-              title="Sistema - Prova Técnica"
-              subject="Projeto feito durante uma seleção feita
-            para ingressar na empresa Slide Works"
+              title={translate.projectsPage.fourthProject.title}
+              subject={translate.projectsPage.fourthProject.subject}
               accessOnGithub="https://github.com/kissinger156/prova_tecnica_slide_works"
               accessSite="https://prova-tecnica-slide-works.netlify.app/"
               icons={[TsIcon, ReactIcon, NodeIcon]}
             />
 
             <Card
-              title="Projeto - Chat RealTime"
-              subject="Projeto feito durante a imersão oferecida
-            pela Rocketseat. NLW-5"
+              title={translate.projectsPage.fifthProject.title}
+              subject={translate.projectsPage.fifthProject.subject}
               accessOnGithub="https://github.com/kissinger156/nlw_5"
               icons={[TsIcon, ReactIcon, SocketIcon]}
             />
 
             <Card
-              title="Projeto - Pesquisa NPS"
-              subject="Projeto feito durante a imersão oferecida
-            pela Rocketseat. NLW-4"
+              title={translate.projectsPage.sixthProject.title}
+              subject={translate.projectsPage.sixthProject.subject}
               accessOnGithub="https://github.com/kissinger156/nlw4_node"
               icons={[TsIcon, NodeIcon]}
             />
@@ -81,7 +79,7 @@ const Projects: React.FC = () => {
               style={{ background: theme.colors.green }}
               link="https://github.com/kissinger156?tab=repositories"
             >
-              Ver mais no Github
+              {translate.projectsPage.seeMoreOnGithub}
             </AnchorButton>
           </div>
         </Wrapper>
