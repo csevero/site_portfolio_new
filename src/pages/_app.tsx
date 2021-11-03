@@ -15,7 +15,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   useEffect(() => {
     async function getViews() {
-      if (!instance) {
+      if (!instance && !process.env.NODE_ENV.includes('dev')) {
         const oldViews = await database.ref('views').get()
         const newViews = oldViews.val().number + 1
         await database.ref('views').update({ number: newViews }, error => {

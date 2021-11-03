@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
   //o conteúdo abaixo adicionamos para definirmos conteúdos para todas as páginas da aplicação, por exemplo, fontes, ou outras coisas necessárias, aqui não aceita title, ou coisas dessa forma, pois aqui é um arquivo de configuração global
   render(): JSX.Element {
     return (
-      <Html lang="pt">
+      <Html lang="pt-BR">
         <Head>
           <meta charSet="utf-8" />
           <link
@@ -73,14 +73,6 @@ export default class MyDocument extends Document {
             content="Esse é o site da minha biografia onde falo um pouco mais sobre minha pessoa, exponho alguns de meus projetos. Fiz o site pensando em aprimorar meu conhecimento e também me apresentar a todos da World Wide Web!"
           />
           <meta property="article:author" content="Carlos Eduardo Severo" />
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@srdusev" />
-          <meta name="twitter:title" content="Meu portfólio - Carlos Severo" /> 
-          <meta name="twitter:creator" content="@srdusev" />
-          <meta
-            name="twitter:description"
-            content="Esse é o site da minha biografia onde falo um pouco mais sobre minha pessoa, exponho alguns de meus projetos. Fiz o site pensando em aprimorar meu conhecimento e também me apresentar a todos da World Wide Web!"
-          />
         </Head>
         <body>
           {/* dentro do main é onde será renderizado o conteúdo da nossa página */}
