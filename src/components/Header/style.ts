@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 export const HeaderWrapper = styled.header`
   width: 100%;
+  z-index: 10;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;

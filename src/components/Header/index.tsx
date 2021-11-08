@@ -21,6 +21,9 @@ export const Header: React.FC = () => {
       <ActiveLink href="/about">{translate.navbar.about}</ActiveLink>
       <ActiveLink href="/projects">{translate.navbar.projects}</ActiveLink>
       <ActiveLink href="/contact">{translate.navbar.contact}</ActiveLink>
+      {
+        // TODO add a mobile menu
+      }
       <ReactFlagsSelect
         countries={['US', 'BR']}
         customLabels={{
