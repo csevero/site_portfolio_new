@@ -88,7 +88,7 @@ export default {
     access: 'Acessar'
   },
   contactsPage: {
-    title: 'Contact',
+    title: 'Contato',
     subTitle:
       'Para entrar em contato comigo, basta selecionar uma das opções abaixo',
     socialNetworks: 'REDES SOCIAIS'
