@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import ReactFlagsSelect from 'react-flags-select'
 import { getLanguage } from '../../helpers/getLanguage'
+import { ToggleThemeButton } from '../ToggleThemeButton'
 import ActiveLink from './Link'
 import { HeaderWrapper } from './style'
 
@@ -35,6 +36,7 @@ export const Header: React.FC = () => {
         selected={router.locale === 'en' ? 'US' : 'BR'}
         onSelect={code => handleChangeLocale(code)}
       />
+      <ToggleThemeButton />
     </HeaderWrapper>
   )
 }

@@ -1,13 +1,10 @@
 import { AppProps } from 'next/app'
 import React, { useEffect, useState } from 'react'
-import { ThemeProvider } from 'styled-components'
-import { Header } from '../components/Header'
-import { StylesProvider } from '../contexts/StylesContext'
-import GlobalStyle from '../styles/global'
-import theme from '../styles/theme'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { Header } from '../components/Header'
 import { database } from '../services/firebase'
+import GlobalStyle from '../styles/global'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [instance, setInstance] = useState(false)
@@ -32,14 +29,12 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <StylesProvider>
-      <ThemeProvider theme={theme}>
-        <Header />
-        <Component {...pageProps} views={views} />
-        <GlobalStyle />
-        <ToastContainer />
-      </ThemeProvider>
-    </StylesProvider>
+    <>
+      <Header />
+      <Component {...pageProps} views={views} />
+      <GlobalStyle />
+      <ToastContainer />
+    </>
   )
 }
 

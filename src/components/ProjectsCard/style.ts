@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { ButtonStyleCSS } from '../../styles/commonStyles'
 
@@ -9,7 +8,7 @@ interface IChangeColorButton {
 export const CardContainer = styled.div`
   width: 350px;
   padding: 10px 20px;
-  background: ${props => props.theme.colors.blue_3};
+  background: var(--color-blue-1);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -29,7 +28,7 @@ export const CardContainer = styled.div`
   p {
     font-size: 16px;
     margin: 5px 0 10px;
-    color: ${props => props.theme.colors.black_2};
+    color: var(--color-text-secondary);
   }
 
   svg {
@@ -50,6 +49,6 @@ export const CardContainer = styled.div`
 
 export const Button = styled.a<IChangeColorButton>`
   ${ButtonStyleCSS}
-  background: ${props => props.colorGreen && props.theme.colors.green};
+  background: ${props => props.colorGreen && 'var(--color-green-1)'};
   font-size: 16px;
 `

@@ -10,12 +10,12 @@ export const HeaderWrapper = styled.header`
   top: 0;
   left: 0;
   padding: 10px 0;
-  background: ${props => props.theme.colors.white};
+  background: var(--color-bg-primary);
 
   a {
     font-weight: 400;
     font-size: 18px;
-    color: ${props => props.theme.colors.black_1};
+    color: var(--color-text-primary);
     position: relative;
     text-decoration: none;
     margin: 0 15px;
@@ -31,13 +31,13 @@ export const HeaderWrapper = styled.header`
       width: 5px;
       height: 0px;
       border-radius: 50px;
-      background: ${props => props.theme.colors.blue_3};
+      background: var(--color-blue-3);
 
       transition: all 0.5s;
     }
 
     &:hover {
-      color: ${props => props.theme.colors.blue_2};
+      color: var(--color-blue-1);
 
       &::after {
         height: 30px;
@@ -47,7 +47,7 @@ export const HeaderWrapper = styled.header`
   }
 
   .active {
-    color: ${props => props.theme.colors.blue_1};
+    color: var(--color-blue-2);
     font-weight: 500;
     position: relative;
 
@@ -62,7 +62,7 @@ export const HeaderWrapper = styled.header`
       width: 5px;
       height: 30px;
       border-radius: 100px;
-      background: ${props => props.theme.colors.blue_3};
+      background: var(--color-blue-3);
     }
   }
 `

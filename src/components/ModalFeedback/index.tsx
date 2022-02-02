@@ -1,8 +1,6 @@
-import React, { FormEvent, useContext, useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { toast } from 'react-toastify'
-import { ThemeContext } from 'styled-components'
 import { getLanguage } from '../../helpers/getLanguage'
-import locales from '../../locales'
 import { database } from '../../services/firebase'
 import { Form, ModalContent, ModalMask } from './style'
 
@@ -11,7 +9,6 @@ interface IModal {
 }
 
 export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
-  const theme = useContext(ThemeContext)
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const translate = getLanguage()
@@ -63,7 +60,7 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
           </button>
           <button
             onClick={() => setIsOpen(false)}
-            style={{ marginTop: '10px', background: theme.colors.red }}
+            style={{ marginTop: '10px', background: "var(--color-red-1)" }}
           >
             {translate.modalFeedback.fields.buttonCancel}
           </button>

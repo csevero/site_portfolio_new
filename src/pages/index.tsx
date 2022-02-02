@@ -65,7 +65,7 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
                 {translate.homePage.buttons.moreAboutMe}
               </Link>
               <button
-                style={{ marginTop: '10px', background: theme.colors.green }}
+                style={{ marginTop: '10px', background: 'var(--color-green-1)' }}
                 onClick={() => setOpenModal(true)}
               >
                 {translate.homePage.buttons.feedback}

@@ -29,8 +29,8 @@ export const ButtonStyleCSS = css<IButtonProps>`
   padding: 10px 25px;
   border: none;
   font-size: 18px;
-  color: ${props => props.theme.colors.white};
-  background: ${props => props.backgroundColor || props.theme.colors.blue_2};
+  color: var(--color-text-white);
+  background: ${props => props.backgroundColor || 'var(--color-blue-2)'};
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 
@@ -50,7 +50,7 @@ export const AnchorStyleCSS = css`
     content: '';
     width: 0;
     height: 1px;
-    background: ${props => props.theme.colors.blue_1};
+    background: var(--color-blue-1);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -66,10 +66,10 @@ export const AnchorStyleCSS = css`
 
   @keyframes pulse-text {
     to {
-      color: ${props => props.theme.colors.black_2};
+      color: var(--color-text-secondary);
     }
     from {
-      color: ${props => props.theme.colors.blue_1};
+      color: var(--color-blue-1);
     }
   }
 `

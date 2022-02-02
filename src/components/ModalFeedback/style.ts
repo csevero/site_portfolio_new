@@ -17,7 +17,8 @@ export const ModalMask = styled(motion.div)`
 
 export const ModalContent = styled.div`
   width: 30vw;
-  background: ${props => props.theme.colors.white};
+  background: var(--color-bg-modal);
+  color: var(--color-text-modal);
   position: relative;
   padding: 20px 35px;
   border-radius: 10px;
@@ -96,7 +97,7 @@ export const Form = styled.form`
       &:active,
       &:focus {
         outline: none;
-        border: 1px solid ${props => `${props.theme.colors.blue_1}60`};
+        border: 1px solid var(--color-blue-2)};
       }
     }
 

@@ -43,6 +43,15 @@ export default class MyDocument extends Document {
 
   //o conteúdo abaixo adicionamos para definirmos conteúdos para todas as páginas da aplicação, por exemplo, fontes, ou outras coisas necessárias, aqui não aceita title, ou coisas dessa forma, pois aqui é um arquivo de configuração global
   render(): JSX.Element {
+    const setInitialTheme = `
+      function getUserPreference() {
+        if(window.localStorage.getItem('theme')) {
+          return window.localStorage.getItem('theme')
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      }
+      document.body.dataset.theme = getUserPreference()
+    `
     return (
       <Html lang="pt-BR">
         <Head>
@@ -75,6 +84,7 @@ export default class MyDocument extends Document {
           <meta property="article:author" content="Carlos Eduardo Severo" />
         </Head>
         <body>
+          <script dangerouslySetInnerHTML={{__html: setInitialTheme}} />
           {/* dentro do main é onde será renderizado o conteúdo da nossa página */}
           <Main />
           {/* aqui é onde será aplicativo os scripts que dão vida a nossa aplicação */}

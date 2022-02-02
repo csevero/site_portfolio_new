@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
           </div>
           <div className="button">
             <AnchorButton
-              style={{ background: theme.colors.green }}
+              style={{ background: 'var(--color-green-1)' }}
               link="https://github.com/kissinger156?tab=repositories"
             >
               {translate.projectsPage.seeMoreOnGithub}
