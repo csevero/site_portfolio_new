@@ -17,7 +17,6 @@ export const Container = styled.div`
 
   @media (max-width: 800px) {
     padding: 0;
-    margin-top: 30px;
   }
 `
 
@@ -72,4 +71,11 @@ export const AnchorStyleCSS = css`
       color: var(--color-blue-1);
     }
   }
+`
+
+export const WrapperStyleCSS = css`
+  display: flex;
+  height: calc(100vh - 10rem);
+  justify-content: space-evenly;
+  align-items: center;
 `

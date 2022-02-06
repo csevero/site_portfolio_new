@@ -1,11 +1,8 @@
 import styled from 'styled-components'
-import { AnchorStyleCSS } from '../commonStyles'
+import { AnchorStyleCSS, WrapperStyleCSS } from '../commonStyles'
 
 export const Wrapper = styled.div`
-  display: flex;
-  height: calc(100vh - 10rem);
-  justify-content: space-evenly;
-  align-items: center;
+  ${WrapperStyleCSS}
 
   @media (max-width: 800px) {
     height: 80vh;
