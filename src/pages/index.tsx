@@ -75,8 +75,8 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
               <AnchorButton link="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo">
                 <MailIcon />
               </AnchorButton>
-              <AnchorButton link="https://github.com/kissinger156">
-                <GitIcon />
+              <AnchorButton className='github-icon' link="https://github.com/kissinger156">
+                <GitIcon  />
               </AnchorButton>
               <AnchorButton link="https://www.linkedin.com/in/carlos-severo-634271162/">
                 <LinkedinIcon />

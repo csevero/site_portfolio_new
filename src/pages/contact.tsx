@@ -38,7 +38,10 @@ const Contact: React.FC = () => {
             <div className="social-networks">
               <span>{translate.contactsPage.socialNetworks}</span>
               <div className="links">
-                <AnchorButton link="https://github.com/kissinger156">
+                <AnchorButton
+                  className="github-icon"
+                  link="https://github.com/kissinger156"
+                >
                   <GitIcon />
                 </AnchorButton>
 

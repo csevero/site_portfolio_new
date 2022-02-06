@@ -11,10 +11,19 @@ body[data-theme="dark"] {
   --color-text-primary: #fff;
   --color-text-secondary: #fff;
   --color-bg-primary: #242424;
+  --color-github-icon: #fff;
   --color-bg-modal: #fff;
   --color-blue-1: #749bf7;
   --color-text-modal: #000;
   --color-bg-toggle: #1e90ff;
+
+  .github-icon {
+        svg {
+          path {
+            fill: var(--color-github-icon);
+          }
+        }
+      }
 }
 
 body,
