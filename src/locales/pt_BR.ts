@@ -4,7 +4,7 @@ export default {
     home: 'Inicio',
     about: 'Sobre',
     projects: 'Projetos',
-    contact: 'Contato',
+    contact: 'Contato'
   },
   notifications: {
     feedbackSuccess: 'Obrigado pela ajuda!',
@@ -30,8 +30,7 @@ export default {
       moreAboutMe: 'Mais sobre mim',
       feedback: 'Dar feedback'
     },
-    totalVisits: 'Total de visitas',
-
+    totalVisits: 'Total de visitas'
   },
   aboutPage: {
     title: 'Sobre mim',
@@ -92,5 +91,9 @@ export default {
     subTitle:
       'Para entrar em contato comigo, basta selecionar uma das opções abaixo',
     socialNetworks: 'REDES SOCIAIS'
+  },
+  notFoundPage: {
+    title: 'Ops, local desconhecido',
+    backToSecurity: 'Voltar para segurança'
   }
 }

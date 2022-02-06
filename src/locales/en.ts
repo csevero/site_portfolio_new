@@ -81,5 +81,9 @@ export default {
     title: 'Contact',
     subTitle: 'To contact me, just select one of the options below.',
     socialNetworks: 'SOCIAL NETWORKS'
+  },
+  notFoundPage: {
+    title: 'Ops, unknown place',
+    backToSecurity: 'Back to security'
   }
 }
