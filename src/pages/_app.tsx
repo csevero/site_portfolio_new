@@ -8,6 +8,8 @@ import GlobalStyle from '../styles/global'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [instance, setInstance] = useState(false)
+  const [activeTheme, setActiveTheme] = useState('light')
+  const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light'
   const [views, setViews] = useState()
 
   useEffect(() => {
@@ -28,9 +30,21 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     getViews()
   }, [])
 
+  useEffect(() => {
+    const saveTheme = localStorage.getItem('theme')
+
+    saveTheme && setActiveTheme(saveTheme)
+  }, [])
+
+  useEffect(() => {
+    document.body.dataset.theme = activeTheme
+
+    localStorage.setItem('theme', activeTheme)
+  }, [activeTheme])
+
   return (
     <>
-      <Header />
+      <Header themeInfo={{ activeTheme, inactiveTheme, setActiveTheme }} />
       <Component {...pageProps} views={views} />
       <GlobalStyle />
       <ToastContainer />

@@ -1,22 +1,17 @@
 import { useEffect, useState } from 'react'
 import { ToggleButton, ToggleThumb } from './style'
 
-const ToggleThemeButton = () => {
-  const [activeTheme, setActiveTheme] = useState('light')
-  const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light'
+interface IHeader {
+  themeInfo: {
+    activeTheme: string
+    setActiveTheme: React.Dispatch<React.SetStateAction<string>>
+    inactiveTheme: string
+  }
+}
 
-  useEffect(() => {
-    const saveTheme = localStorage.getItem('theme')
-
-    saveTheme && setActiveTheme(saveTheme)
-  }, [])
-
-  useEffect(() => {
-    document.body.dataset.theme = activeTheme
-
-    localStorage.setItem('theme', activeTheme)
-  }, [activeTheme])
-
+const ToggleThemeButton: React.FC<IHeader> = ({
+  themeInfo: { activeTheme, inactiveTheme, setActiveTheme }
+}) => {
   return (
     <ToggleButton
       aria-label={`Change to ${inactiveTheme} mode`}

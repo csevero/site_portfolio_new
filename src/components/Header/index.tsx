@@ -6,7 +6,15 @@ import { ToggleThemeButton } from '../ToggleThemeButton'
 import ActiveLink from './Link'
 import { HeaderWrapper } from './style'
 
-export const Header: React.FC = () => {
+interface IHeader {
+  themeInfo: {
+    activeTheme: string
+    setActiveTheme: React.Dispatch<React.SetStateAction<string>>
+    inactiveTheme: string
+  }
+}
+
+export const Header: React.FC<IHeader> = ({ themeInfo }) => {
   const [activeMenuMobile, setActiveMenuMobile] = useState('')
   const [bxActive, setBxActive] = useState('')
   const router = useRouter()
@@ -41,7 +49,7 @@ export const Header: React.FC = () => {
           selected={router.locale === 'en' ? 'US' : 'BR'}
           onSelect={code => handleChangeLocale(code)}
         />
-        <ToggleThemeButton />
+        <ToggleThemeButton themeInfo={themeInfo} />
       </>
     )
   }

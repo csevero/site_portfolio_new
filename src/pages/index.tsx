@@ -22,7 +22,6 @@ interface IHomeProps {
 
 const Home: React.FC<IHomeProps> = ({ views }) => {
   const [openModal, setOpenModal] = useState(false)
-  const theme = useContext(ThemeContext)
   const translate = getLanguage()
 
   useEffect(() => {

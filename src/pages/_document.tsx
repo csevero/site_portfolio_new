@@ -45,8 +45,9 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     const setInitialTheme = `
       function getUserPreference() {
-        if(window.localStorage.getItem('theme')) {
-          return window.localStorage.getItem('theme')
+        const theme = window.localStorage.getItem('theme')
+        if(theme) {
+          return theme
         }
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
       }
