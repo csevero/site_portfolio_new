@@ -79,6 +79,14 @@ const Projects: React.FC = () => {
               accessSite="https://discord-community-manager.vercel.app"
               icons={[TsIcon, NextIcon]}
             />
+
+            <Card
+              title={translate.projectsPage.eighthProject.title}
+              subject={translate.projectsPage.eighthProject.subject}
+              accessSite="https://cpfl-segunda-via.vercel.app/"
+              accessOnGithub='https://github.com/kissinger156/get-duplicate-CPFL-bill'
+              icons={[TsIcon, NextIcon]}
+            />
           </div>
           <div className="button">
             <AnchorButton

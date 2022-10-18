@@ -87,6 +87,11 @@ export default {
       subject:
         'Site feito para uma empresa responsável por criar bots personalizados para Servidores de Discord'
     },
+    eighthProject: {
+      title: 'Site - Get Duplicate CPFL Bill',
+      subject:
+        'Site feito para facilitar o processo de pegar uma 2º via de boleto da CPF (Empresa de energia)'
+    },
     seeMoreOnGithub: 'Ver mais no Github',
     seeOnGithub: 'Ver no Github',
     access: 'Acessar'

@@ -78,6 +78,11 @@ export default {
       subject:
         'Website made to company that builds custom bots to Discord Servers'
     },
+    eighthProject: {
+      title: 'Website - Get CPFL Bill',
+      subject:
+        'Website made to have a easy way to get duplicate bills of CPFL (Energy Company)'
+    },
     seeMoreOnGithub: 'See more on Github',
     seeOnGithub: 'See on Github',
     access: 'Access'
