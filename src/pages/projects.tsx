@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import React, { useContext } from 'react'
-import { ThemeContext } from 'styled-components'
+import React from 'react'
 import JavaIcon from '../assets/vector/java.svg'
 import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
@@ -13,7 +12,6 @@ import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/Projects'
 
 const Projects: React.FC = () => {
-  const theme = useContext(ThemeContext)
   const translate = getLanguage()
   return (
     <>
@@ -35,7 +33,6 @@ const Projects: React.FC = () => {
               accessSite="https://impactos-car.netlify.app/"
               icons={[TsIcon, ReactIcon]}
             />
-
             <Card
               title={translate.projectsPage.secondProject.title}
               subject={translate.projectsPage.secondProject.subject}

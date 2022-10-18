@@ -61,7 +61,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
-          <link ref="icon" rel="favicon.ico" />
+          <link ref="icon" rel="favicon-site.png" />
           <meta name="language" content="pt-BR" />
           <meta
             name="description"
@@ -72,7 +72,7 @@ export default class MyDocument extends Document {
             
           <meta
             name="keywords"
-            content="portfolio, programação, projetos, reactjs, nodejs, nextjs"
+            content="portfolio, programação, projetos, reactjs, nodejs, nextjs, twilio"
           />
           <meta property="og:type" content="page" />
           <meta property="og:url" content="https://carlossevero.com.br" />
@@ -85,10 +85,8 @@ export default class MyDocument extends Document {
           <meta property="article:author" content="Carlos Eduardo Severo" />
         </Head>
         <body>
-          <script dangerouslySetInnerHTML={{__html: setInitialTheme}} />
-          {/* dentro do main é onde será renderizado o conteúdo da nossa página */}
+          <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
-          {/* aqui é onde será aplicativo os scripts que dão vida a nossa aplicação */}
           <NextScript />
         </body>
       </Html>

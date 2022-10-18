@@ -39,7 +39,7 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
       .typeString('Dev. Next JS')
       .pauseFor(1000)
       .deleteAll()
-      .typeString('Youtuber')
+      .typeString('Dev. Twilio')
       .pauseFor(1000)
       .deleteAll()
       .start()

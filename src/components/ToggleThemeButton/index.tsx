@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { ToggleButton, ToggleThumb } from './style'
 
 interface IHeader {
