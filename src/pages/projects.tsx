@@ -5,6 +5,8 @@ import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
 import SocketIcon from '../assets/vector/socket-io.svg'
 import TsIcon from '../assets/vector/typescript.svg'
+import NextIcon from '../assets/vector/nextjs.svg'
+import HerokuIcon from '../assets/vector/heroku.svg'
 import { AnchorButton } from '../components/AnchorButton'
 import { Card } from '../components/ProjectsCard/Card'
 import { getLanguage } from '../helpers/getLanguage'
@@ -46,7 +48,7 @@ const Projects: React.FC = () => {
               subject={translate.projectsPage.thirdProject.subject}
               accessOnGithub="https://github.com/kissinger156/project_devSuperior"
               accessSite="https://deliveryds-sds2.netlify.app/"
-              icons={[TsIcon, ReactIcon, JavaIcon]}
+              icons={[TsIcon, ReactIcon, JavaIcon, HerokuIcon]}
             />
 
             <Card
@@ -69,6 +71,13 @@ const Projects: React.FC = () => {
               subject={translate.projectsPage.sixthProject.subject}
               accessOnGithub="https://github.com/kissinger156/nlw4_node"
               icons={[TsIcon, NodeIcon]}
+            />
+
+            <Card
+              title={translate.projectsPage.seventhProject.title}
+              subject={translate.projectsPage.seventhProject.subject}
+              accessSite="https://discord-community-manager.vercel.app"
+              icons={[TsIcon, NextIcon]}
             />
           </div>
           <div className="button">

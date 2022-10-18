@@ -6,7 +6,7 @@ interface ICardProps {
   title: string
   subject: string
   accessSite?: string
-  accessOnGithub: string
+  accessOnGithub?: string
   delay?: number
   icons: string[]
 }
@@ -39,9 +39,15 @@ export const Card: React.FC<ICardProps> = ({
             {translate.projectsPage.access}
           </Button>
         )}
-        <Button rel="noreferrer noopener" target="_blank" href={accessOnGithub}>
-          {translate.projectsPage.seeOnGithub}
-        </Button>
+        {accessOnGithub && (
+          <Button
+            rel="noreferrer noopener"
+            target="_blank"
+            href={accessOnGithub}
+          >
+            {translate.projectsPage.seeOnGithub}
+          </Button>
+        )}
       </div>
     </CardContainer>
   )

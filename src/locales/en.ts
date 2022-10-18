@@ -73,6 +73,11 @@ export default {
       title: 'Project - NPS Search',
       subject: 'Project made during the immersion offered by Rocketseat. NLW-4'
     },
+    seventhProject: {
+      title: 'Website - Community Manager',
+      subject:
+        'Website made to company that builds custom bots to Discord Servers'
+    },
     seeMoreOnGithub: 'See more on Github',
     seeOnGithub: 'See on Github',
     access: 'Access'
