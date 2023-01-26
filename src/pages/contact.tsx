@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
               <div className="links">
                 <AnchorButton
                   className="github-icon"
-                  link="https://github.com/kissinger156"
+                  link="https://github.com/csevero"
                 >
                   <GitIcon />
                 </AnchorButton>

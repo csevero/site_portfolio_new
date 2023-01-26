@@ -31,14 +31,14 @@ const Projects: React.FC = () => {
             <Card
               title={translate.projectsPage.firstProject.title}
               subject={translate.projectsPage.firstProject.subject}
-              accessOnGithub="https://github.com/kissinger156/site_bodyShop"
+              accessOnGithub="https://github.com/csevero/site_bodyShop"
               accessSite="https://impactos-car.netlify.app/"
               icons={[TsIcon, ReactIcon]}
             />
             <Card
               title={translate.projectsPage.secondProject.title}
               subject={translate.projectsPage.secondProject.subject}
-              accessOnGithub="https://github.com/kissinger156/site_project_spiderman-React"
+              accessOnGithub="https://github.com/csevero/site_project_spiderman-React"
               accessSite="https://spiderman-milesmorales-react.netlify.app/"
               icons={[TsIcon, ReactIcon]}
             />
@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
             <Card
               title={translate.projectsPage.thirdProject.title}
               subject={translate.projectsPage.thirdProject.subject}
-              accessOnGithub="https://github.com/kissinger156/project_devSuperior"
+              accessOnGithub="https://github.com/csevero/project_devSuperior"
               accessSite="https://deliveryds-sds2.netlify.app/"
               icons={[TsIcon, ReactIcon, JavaIcon, HerokuIcon]}
             />
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
             <Card
               title={translate.projectsPage.fourthProject.title}
               subject={translate.projectsPage.fourthProject.subject}
-              accessOnGithub="https://github.com/kissinger156/prova_tecnica_slide_works"
+              accessOnGithub="https://github.com/csevero/prova_tecnica_slide_works"
               accessSite="https://prova-tecnica-slide-works.netlify.app/"
               icons={[TsIcon, ReactIcon, NodeIcon]}
             />
@@ -62,14 +62,14 @@ const Projects: React.FC = () => {
             <Card
               title={translate.projectsPage.fifthProject.title}
               subject={translate.projectsPage.fifthProject.subject}
-              accessOnGithub="https://github.com/kissinger156/nlw_5"
+              accessOnGithub="https://github.com/csevero/nlw_5"
               icons={[TsIcon, ReactIcon, SocketIcon]}
             />
 
             <Card
               title={translate.projectsPage.sixthProject.title}
               subject={translate.projectsPage.sixthProject.subject}
-              accessOnGithub="https://github.com/kissinger156/nlw4_node"
+              accessOnGithub="https://github.com/csevero/nlw4_node"
               icons={[TsIcon, NodeIcon]}
             />
 
@@ -84,14 +84,14 @@ const Projects: React.FC = () => {
               title={translate.projectsPage.eighthProject.title}
               subject={translate.projectsPage.eighthProject.subject}
               accessSite="https://cpfl-segunda-via.vercel.app/"
-              accessOnGithub='https://github.com/kissinger156/get-duplicate-CPFL-bill'
+              accessOnGithub='https://github.com/csevero/get-duplicate-CPFL-bill'
               icons={[TsIcon, NextIcon]}
             />
           </div>
           <div className="button">
             <AnchorButton
               style={{ background: 'var(--color-green-1)' }}
-              link="https://github.com/kissinger156?tab=repositories"
+              link="https://github.com/csevero?tab=repositories"
             >
               {translate.projectsPage.seeMoreOnGithub}
             </AnchorButton>
