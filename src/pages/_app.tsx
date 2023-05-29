@@ -6,12 +6,14 @@ import { Header } from '../components/Header'
 import { database } from '../services/firebase'
 import GlobalStyle from '../styles/global'
 import { LocaleProvider } from '../contexts/locale'
+import { useRouter } from 'next/router'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [instance, setInstance] = useState(false)
   const [activeTheme, setActiveTheme] = useState('light')
   const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light'
   const [views, setViews] = useState()
+  const router = useRouter()
 
   useEffect(() => {
     async function getViews() {
@@ -44,7 +46,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <LocaleProvider>
       <Header themeInfo={{ activeTheme, inactiveTheme, setActiveTheme }} />
-      <Component {...pageProps} views={views} />
+      <Component {...pageProps} {...(router.pathname === '/' && {views})} />
       <GlobalStyle />
       <ToastContainer />
     </LocaleProvider>

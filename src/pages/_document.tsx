@@ -9,10 +9,6 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-/*
-documento foi copiado do site https://github.com/vercel/next.js/blob/canary/examples/with-styled-components/pages/_document.js. Onde é um exemplo do próprio styled components, para que nosso site, seja renderizado já com as estilizações aplicadas, pois por padrão o next carregaria o site e depois aplicaria os styles, com essas configurações ele já aplica durante a renderização.
-Foi adicionado tipos
-*/
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
@@ -41,7 +37,6 @@ export default class MyDocument extends Document {
     }
   }
 
-  //o conteúdo abaixo adicionamos para definirmos conteúdos para todas as páginas da aplicação, por exemplo, fontes, ou outras coisas necessárias, aqui não aceita title, ou coisas dessa forma, pois aqui é um arquivo de configuração global
   render(): JSX.Element {
     const setInitialTheme = `
       function getUserPreference() {

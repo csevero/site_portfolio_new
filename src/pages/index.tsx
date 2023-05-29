@@ -131,7 +131,7 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
               {new Date().toLocaleDateString(translate.locale, {
                 dateStyle: 'long'
               })}{' '}
-              - {translate.homePage.totalVisits} {views ? views : '...'}
+              - {translate.homePage.totalVisits} {views || '...'}
             </span>
           </div>
         </Wrapper>
