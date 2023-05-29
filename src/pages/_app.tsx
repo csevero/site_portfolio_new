@@ -46,7 +46,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <LocaleProvider>
       <Header themeInfo={{ activeTheme, inactiveTheme, setActiveTheme }} />
-      <Component {...pageProps} {...(router.pathname === '/' && {views})} />
+      <Component {...pageProps} {...(router.pathname === '/' && { views })} />
       <GlobalStyle />
       <ToastContainer />
     </LocaleProvider>
