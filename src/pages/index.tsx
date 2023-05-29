@@ -12,7 +12,7 @@ import MailIcon from '../assets/vector/mail1.svg'
 import WhatsIcon from '../assets/vector/whatsapp.svg'
 import { AnchorButton } from '../components/AnchorButton'
 import { ModalFeedback } from '../components/ModalFeedback'
-import { getLanguage } from '../helpers/getLanguage'
+import { useLocaleContext } from '../contexts/locale'
 import { Container } from '../styles/commonStyles'
 import { FirstSection, Wrapper } from '../styles/pages/Home'
 
@@ -22,6 +22,7 @@ interface IHomeProps {
 
 const Home: React.FC<IHomeProps> = ({ views }) => {
   const [openModal, setOpenModal] = useState(false)
+  const { getLanguage } = useLocaleContext()
   const translate = getLanguage()
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
       .deleteAll()
       .start()
   }, [])
+
   return (
     <>
       <Head>

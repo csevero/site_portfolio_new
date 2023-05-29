@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import React from 'react'
 import perfilImg from '../assets/images/perfil.png'
-import { getLanguage } from '../helpers/getLanguage'
+import { useLocaleContext } from '../contexts/locale'
 import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/About'
 
 const About: React.FC = () => {
+  const { getLanguage } = useLocaleContext()
   const translate = getLanguage()
 
   return (

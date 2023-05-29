@@ -1,14 +1,16 @@
-import React from 'react'
+import { Player } from '@lottiefiles/react-lottie-player'
 import Head from 'next/head'
+import React from 'react'
+import NotFound from '../assets/json/not-found.json'
+import { ButtonLink } from '../components/Button'
+import { useLocaleContext } from '../contexts/locale'
 import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/Error'
-import { Player } from '@lottiefiles/react-lottie-player'
-import NotFound from '../assets/json/not-found.json'
-import { getLanguage } from '../helpers/getLanguage'
-import { ButtonLink } from '../components/Button'
 
 const Error: React.FC = () => {
+  const { getLanguage } = useLocaleContext()
   const translate = getLanguage()
+
   return (
     <>
       <Head>

@@ -1,20 +1,22 @@
 import Head from 'next/head'
 import React from 'react'
+import HerokuIcon from '../assets/vector/heroku.svg'
 import JavaIcon from '../assets/vector/java.svg'
+import NextIcon from '../assets/vector/nextjs.svg'
 import NodeIcon from '../assets/vector/node.svg'
 import ReactIcon from '../assets/vector/reactjs.svg'
 import SocketIcon from '../assets/vector/socket-io.svg'
 import TsIcon from '../assets/vector/typescript.svg'
-import NextIcon from '../assets/vector/nextjs.svg'
-import HerokuIcon from '../assets/vector/heroku.svg'
 import { AnchorButton } from '../components/AnchorButton'
 import { Card } from '../components/ProjectsCard/Card'
-import { getLanguage } from '../helpers/getLanguage'
+import { useLocaleContext } from '../contexts/locale'
 import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/Projects'
 
 const Projects: React.FC = () => {
+  const { getLanguage } = useLocaleContext()
   const translate = getLanguage()
+
   return (
     <>
       <Head>

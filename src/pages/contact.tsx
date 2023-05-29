@@ -1,17 +1,19 @@
 import { Player } from '@lottiefiles/react-lottie-player'
+import Head from 'next/head'
 import React from 'react'
 import SendEmail from '../assets/json/email-send.json'
 import GitIcon from '../assets/vector/github.svg'
 import InstaIcon from '../assets/vector/instagram1.svg'
 import LinkedinIcon from '../assets/vector/linkedin.svg'
-import { FirstSection, Wrapper } from '../styles/pages/Contact'
-import Head from 'next/head'
-import { Container } from '../styles/commonStyles'
 import { AnchorButton } from '../components/AnchorButton'
-import { getLanguage } from '../helpers/getLanguage'
+import { useLocaleContext } from '../contexts/locale'
+import { Container } from '../styles/commonStyles'
+import { FirstSection, Wrapper } from '../styles/pages/Contact'
 
 const Contact: React.FC = () => {
+  const { getLanguage } = useLocaleContext()
   const translate = getLanguage()
+
   return (
     <>
       <Head>

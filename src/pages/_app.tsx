@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Header } from '../components/Header'
 import { database } from '../services/firebase'
 import GlobalStyle from '../styles/global'
+import { LocaleProvider } from '../contexts/locale'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [instance, setInstance] = useState(false)
@@ -28,9 +29,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     }
 
     getViews()
-  }, [])
 
-  useEffect(() => {
     const saveTheme = localStorage.getItem('theme')
 
     saveTheme && setActiveTheme(saveTheme)
@@ -43,12 +42,12 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   }, [activeTheme])
 
   return (
-    <>
+    <LocaleProvider>
       <Header themeInfo={{ activeTheme, inactiveTheme, setActiveTheme }} />
       <Component {...pageProps} views={views} />
       <GlobalStyle />
       <ToastContainer />
-    </>
+    </LocaleProvider>
   )
 }
 
