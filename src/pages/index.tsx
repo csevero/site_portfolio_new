@@ -1,10 +1,10 @@
 import { Player } from '@lottiefiles/react-lottie-player'
 import Head from 'next/head'
 import Link from 'next/link'
-import React, { useContext, useEffect, useState } from 'react'
-import { ThemeContext } from 'styled-components'
+import React, { useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect/dist/core'
 import BoyCoding from '../assets/json/boy-coding.json'
+import CurriculumIcon from '../assets/vector/curriculum.svg'
 import GitIcon from '../assets/vector/github.svg'
 import InstagramIcon from '../assets/vector/instagram1.svg'
 import LinkedinIcon from '../assets/vector/linkedin.svg'
@@ -74,23 +74,46 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
               </button>
             </div>
             <div className="social-networks">
-              <AnchorButton link="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo">
+              <AnchorButton
+                link="mailto:severo.e.carlos@gmail.com?subject=Olá Carlos&body=Escreva sua mensagem aqui ou abaixo"
+                title="E-mail"
+              >
                 <MailIcon />
               </AnchorButton>
               <AnchorButton
                 className="github-icon"
                 link="https://github.com/csevero"
+                title="Github"
               >
                 <GitIcon />
               </AnchorButton>
-              <AnchorButton link="https://www.linkedin.com/in/carlos-severo-634271162/">
+              <AnchorButton
+                link="https://www.linkedin.com/in/carlos-severo-634271162/"
+                title="Linkedin"
+              >
                 <LinkedinIcon />
               </AnchorButton>
-              <AnchorButton link="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!">
+              <AnchorButton
+                link="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!"
+                title="Whatsapp"
+              >
                 <WhatsIcon />
               </AnchorButton>
-              <AnchorButton link="https://www.instagram.com/carlosedu156/">
+              <AnchorButton
+                link="https://www.instagram.com/carlosedu156/"
+                title="Instagram"
+              >
                 <InstagramIcon />
+              </AnchorButton>
+              <AnchorButton
+                link={
+                  translate.locale === 'en'
+                    ? '/Carlos_Severo-En.pdf'
+                    : '/Carlos_Severo-Pt_BR.pdf'
+                }
+                title={translate.anchorLinksTitle.curriculum}
+              >
+                <CurriculumIcon />
               </AnchorButton>
             </div>
           </FirstSection>

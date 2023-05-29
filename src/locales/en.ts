@@ -95,5 +95,8 @@ export default {
   notFoundPage: {
     title: 'Ops, unknown place',
     backToSecurity: 'Back to security'
+  },
+  anchorLinksTitle: {
+    curriculum: 'Curriculum'
   }
 }

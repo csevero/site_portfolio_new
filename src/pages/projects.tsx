@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
               title={translate.projectsPage.eighthProject.title}
               subject={translate.projectsPage.eighthProject.subject}
               accessSite="https://cpfl-segunda-via.vercel.app/"
-              accessOnGithub='https://github.com/csevero/get-duplicate-CPFL-bill'
+              accessOnGithub="https://github.com/csevero/get-duplicate-CPFL-bill"
               icons={[TsIcon, NextIcon]}
             />
           </div>

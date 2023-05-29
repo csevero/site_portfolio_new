@@ -25,7 +25,7 @@ const Error: React.FC = () => {
               className="main-gif"
             />
             <ButtonLink prefetch={false} link="/">
-            {translate.notFoundPage.backToSecurity}
+              {translate.notFoundPage.backToSecurity}
             </ButtonLink>
           </div>
         </Wrapper>

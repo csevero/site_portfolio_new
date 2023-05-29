@@ -105,5 +105,8 @@ export default {
   notFoundPage: {
     title: 'Ops, local desconhecido',
     backToSecurity: 'Voltar para segurança'
+  },
+  anchorLinksTitle: {
+    curriculum: 'Currículo'
   }
 }
