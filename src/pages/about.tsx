@@ -42,12 +42,6 @@ const About: React.FC = () => {
                   </a>
                 </span>
                 <span className="link">
-                  <b>Whatsapp: </b>
-                  <a href="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!">
-                    (15)99660-5712
-                  </a>
-                </span>
-                <span className="link">
                   <b>{translate.aboutPage.contentInfo.work} </b>
                   {translate.aboutPage.contentInfo.workOn}{' '}
                   <a href={`https://slideworks.cc/${translate.locale}`}>

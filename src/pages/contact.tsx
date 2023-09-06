@@ -32,11 +32,6 @@ const Contact: React.FC = () => {
               severo.e.carlos@gmail.com
             </AnchorButton>
 
-            <span>WHATSAPP</span>
-            <AnchorButton link="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!">
-              (15)99660-5712
-            </AnchorButton>
-
             <div className="social-networks">
               <span>{translate.contactsPage.socialNetworks}</span>
               <div className="links">

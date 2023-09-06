@@ -9,7 +9,6 @@ import GitIcon from '../assets/vector/github.svg'
 import InstagramIcon from '../assets/vector/instagram1.svg'
 import LinkedinIcon from '../assets/vector/linkedin.svg'
 import MailIcon from '../assets/vector/mail1.svg'
-import WhatsIcon from '../assets/vector/whatsapp.svg'
 import { AnchorButton } from '../components/AnchorButton'
 import { ModalFeedback } from '../components/ModalFeedback'
 import { useLocaleContext } from '../contexts/locale'
@@ -94,12 +93,6 @@ const Home: React.FC<IHomeProps> = ({ views }) => {
                 title="Linkedin"
               >
                 <LinkedinIcon />
-              </AnchorButton>
-              <AnchorButton
-                link="https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!"
-                title="Whatsapp"
-              >
-                <WhatsIcon />
               </AnchorButton>
               <AnchorButton
                 link="https://www.instagram.com/carlosedu156/"
