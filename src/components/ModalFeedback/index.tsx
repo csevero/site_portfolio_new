@@ -60,7 +60,7 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
           </button>
           <button
             onClick={() => setIsOpen(false)}
-            style={{ marginTop: '10px', background: "var(--color-red-1)" }}
+            style={{ marginTop: '10px', background: 'var(--color-red-1)' }}
           >
             {translate.modalFeedback.fields.buttonCancel}
           </button>

@@ -1,4 +1,5 @@
-import { createContext, useContext } from 'react'
+import React, { createContext, useContext } from 'react'
+
 import { getLanguage } from '../helpers/getLanguage'
 import pt_BR from '../locales/pt_BR'
 

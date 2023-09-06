@@ -12,7 +12,13 @@ export const AnchorButton: React.FC<IAnchorButton> = ({
   ...rest
 }) => {
   return (
-    <a rel="noreferrer noopener" target="_blank" href={link} title={title} {...rest}>
+    <a
+      rel="noreferrer noopener"
+      target="_blank"
+      href={link}
+      title={title}
+      {...rest}
+    >
       {children}
     </a>
   )

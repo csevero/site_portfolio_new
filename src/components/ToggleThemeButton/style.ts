@@ -8,7 +8,7 @@ export const ToggleButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 1.0rem;
+  font-size: 1rem;
   width: var(--toggle-width);
   height: var(--toggle-height);
   padding: var(--toggle-padding);

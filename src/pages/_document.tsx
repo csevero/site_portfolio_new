@@ -37,6 +37,7 @@ export default class MyDocument extends Document {
     }
   }
 
+  // eslint-disable-next-line no-undef
   render(): JSX.Element {
     const setInitialTheme = `
       function getUserPreference() {
@@ -56,6 +57,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
+          {/* eslint-disable-next-line react/no-string-refs */}
           <link ref="icon" rel="favicon-site.png" />
           <meta name="language" content="pt-BR" />
           <meta
@@ -64,7 +66,7 @@ export default class MyDocument extends Document {
           />
           <meta name="robots" content="all" />
           <meta name="author" content="Carlos Eduardo Severo" />
-            
+
           <meta
             name="keywords"
             content="portfolio, programação, projetos, reactjs, nodejs, nextjs, twilio"
@@ -72,7 +74,7 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="page" />
           <meta property="og:url" content="https://carlossevero.com.br" />
           <meta property="og:title" content="Meu portfólio - Carlos Severo" />
-            
+
           <meta
             property="og:description"
             content="Esse é o site da minha biografia onde falo um pouco mais sobre minha pessoa, exponho alguns de meus projetos. Fiz o site pensando em aprimorar meu conhecimento e também me apresentar a todos da World Wide Web!"

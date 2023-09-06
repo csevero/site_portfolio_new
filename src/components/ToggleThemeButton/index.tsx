@@ -1,3 +1,4 @@
+import React from 'react'
 import { ToggleButton, ToggleThumb } from './style'
 
 interface IHeader {
