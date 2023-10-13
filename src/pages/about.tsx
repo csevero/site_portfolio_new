@@ -45,7 +45,7 @@ const About: React.FC = () => {
                   <b>{translate.aboutPage.contentInfo.work} </b>
                   {translate.aboutPage.contentInfo.workOn}{' '}
                   <a href={`https://slideworks.cc/${translate.locale}`}>
-                    <b> Slide Works</b>
+                    <b>Slideworks</b>
                   </a>
                 </span>
                 <span className="link">
