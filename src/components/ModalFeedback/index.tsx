@@ -16,14 +16,16 @@ export const ModalFeedback: React.FC<IModal> = ({ setIsOpen }) => {
   async function handleSendFeedback(e: FormEvent) {
     e.preventDefault()
 
-    await database.ref(`/feedbacks/${name}`).set({ message }, error => {
-      if (error) {
-        console.log(error)
-        toast.error(translate.notifications.feedbackError)
-      }
-      toast.success(translate.notifications.feedbackSuccess)
-      setIsOpen(false)
-    })
+    await database
+      .ref(`/feedbacks/${name}`)
+      .set({ message, date: new Date().toLocaleString('pt-br') }, error => {
+        if (error) {
+          console.log(error)
+          toast.error(translate.notifications.feedbackError)
+        }
+        toast.success(translate.notifications.feedbackSuccess)
+        setIsOpen(false)
+      })
   }
 
   return (
