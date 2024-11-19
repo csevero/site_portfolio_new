@@ -18,7 +18,9 @@ export const Wrapper = styled(motion.div)`
     justify-content: center;
 
     img {
-      width: 300px;
+      max-width: 800px;
+      width: 50%;
+      border-radius: 12px;
     }
 
     .infos {
@@ -34,6 +36,7 @@ export const Wrapper = styled(motion.div)`
         font-size: 18px;
         line-height: 25px;
         text-align: justify;
+        white-space: break-spaces;
       }
 
       .link {
@@ -53,9 +56,14 @@ export const Wrapper = styled(motion.div)`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 950px) {
     .about-infos {
       flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
       .infos {
         margin: 10px 0;
       }

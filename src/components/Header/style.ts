@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header`
     position: fixed;
     top: 0;
     left: 0;
-    padding: 10px 0;
+    margin: 10px 0;
     background: var(--color-bg-primary);
 
     a {

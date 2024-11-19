@@ -20,13 +20,15 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       if (!instance && !process.env.NODE_ENV.includes('dev')) {
         const oldViews = await database.ref('views').get()
         const newViews = oldViews.val().number + 1
-        await database.ref('views').update({ number: newViews }, error => {
-          if (error) {
-            console.log(error)
-          }
-          setViews(newViews)
-          setInstance(true)
-        })
+        await database
+          .ref('views')
+          .update({ number: newViews, lastUpdatedDate: new Date() }, error => {
+            if (error) {
+              console.warn('Error to update firebase', error)
+            }
+            setViews(newViews)
+            setInstance(true)
+          })
       }
     }
 

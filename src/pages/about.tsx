@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import perfilImg from '../assets/images/perfil.png'
+import perfilImg from '../assets/images/profile.jpg'
 import { useLocaleContext } from '../contexts/locale'
 import { Container } from '../styles/commonStyles'
 import { Wrapper } from '../styles/pages/About'
@@ -44,14 +44,8 @@ const About: React.FC = () => {
                 <span className="link">
                   <b>{translate.aboutPage.contentInfo.work} </b>
                   {translate.aboutPage.contentInfo.workOn}{' '}
-                  <a href={`https://slideworks.cc/${translate.locale}`}>
-                    <b>Slideworks</b>
-                  </a>
-                </span>
-                <span className="link">
-                  <b>Youtube: </b>
-                  <a href="https://www.youtube.com/channel/UCFcuIk6AjU_eiLZaTjJA8kA">
-                    Carlos Severo
+                  <a href="https://meutudo.com.br/">
+                    <b>Meu Tudo</b>
                   </a>
                 </span>
               </div>

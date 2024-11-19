@@ -35,7 +35,7 @@ export default {
   aboutPage: {
     title: 'About me',
     subTitle: "Hello, I'm Carlos",
-    information: `I'm a developer, actually I use NodeJS, ReactJS and NextJS in my projects, using Javascript or Typescript for programming, also I've knowledge about Twilio Services, HTML and CSS, in the future I want extends my knowledge for other technologies. My actually focus is develop web applications(websites) and backend applications(API's). I'm a focused person, pro active and always open to new opportunities and learn new things. Oh and not less important I've a channel on Youtube of motorcycle vlogs that I post frequently videos showing my day.`,
+    information: `I am a passionate developer focused on creating high-performance web applications and scalable backend solutions. I have experience building modern applications with ReactJS and NextJS, as well as developing robust backend systems using NodeJS and NestJS. I also work with cloud platforms like AWS, Google Cloud Platform (GCP), and Digital Ocean to efficiently manage, scale, and deploy applications.\nI am also a specialist in Twilio services, where I develop solutions for automated messaging, customer notifications, and custom workflows within the Twilio Flex Contact Center. My implementations include serverless functions, complex routing with TaskRouter, real-time communication using Conversations and Programmable Chat, and leveraging tools like Frontline and Verify to create secure and personalized interactions.\nI am a focused, proactive individual, always open to learning and exploring new technologies.`,
     contentInfo: {
       name: 'Name: ',
       email: 'Email: ',

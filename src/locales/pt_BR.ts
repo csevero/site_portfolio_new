@@ -35,13 +35,7 @@ export default {
   aboutPage: {
     title: 'Sobre mim',
     subTitle: 'Olá, eu sou o Carlos',
-    information: `Eu sou desenvolvedor, atualmente utilizo NodeJS, ReactJS e NextJS em meus projetos, usando Javascript ou Typescript para programar, também tenho conhecimento em serviços do Twilio, HTML, CSS e futuramente pretendo extender meus
-    conhecimentos para outras tecnologias. Meu foco atual é
-    desenvolver aplicações Web(Sites) e aplicações Backend(API's).
-    Sou uma pessoa focada, pró ativa e sempre aberto a novas
-    oportunidades e aprender coisas novas. Ah e não menos importante
-    tenho um canal no Youtube de motovlog que posto vídeos
-    frequentemente mostrando meu dia a dia!`,
+    information: `Sou desenvolvedor apaixonado por criar Aplicações Web de alto desempenho e Soluções Backend escaláveis. Tenho experiência em construir aplicações modernas com ReactJS e NextJS, além de desenvolver sistemas robustos no backend usando NodeJS e NestJS. Também trabalho com plataformas de nuvem como AWS, Google Cloud Platform (GCP) e Digital Ocean para gerenciar, escalar e implantar aplicações de forma eficiente.\nTambém sou especialista em serviços da Twilio, onde desenvolvo soluções para mensagens automatizadas, notificações de clientes e fluxos de trabalho personalizados no Twilio Flex Contact Center. Minhas implementações incluem funções serverless, roteamento complexo com TaskRouter, comunicação em tempo real com Conversations e Programmable Chat, além do uso de ferramentas como Frontline e Verify para criar interações seguras e personalizadas.\nSou uma pessoa focada, pró-ativa e sempre aberta a aprender e explorar novas tecnologias.`,
     contentInfo: {
       name: 'Nome: ',
       email: 'Email: ',
